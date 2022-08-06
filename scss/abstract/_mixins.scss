@@ -1,0 +1,175 @@
+@import './variables';
+
+@mixin absoluteCalc {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+}
+
+@mixin flexCentar {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+@mixin btnSecondary {
+     color: $font-white;
+     background-color: $font-secondary;
+     padding: 18px 24px;
+     font-size: 15px;
+     @include flexCentar;
+     font-weight: 400;
+}
+
+@mixin btnYallow {
+     padding: 0px 20px;
+     background-color: $font-primary;
+     color: $font-text;
+     border-radius: $border-radius-50;
+     font-size: 16px;
+     line-height: 40px;
+     font-weight: 500;
+}
+
+@mixin containerCounter {
+     position: relative;
+     counter-increment: counter;
+}
+
+@mixin counter {
+     content: "0"counter(counter);
+     position: absolute;
+     top: 0;
+     left: 0;
+     padding-right: 25px;
+     font-size: 20px;
+     font-weight: 400;
+     color: $font-black-50;
+}
+
+@mixin line {
+     content: '';
+     position: absolute;
+     bottom: calc((52.5px / 2) - 5px);
+     left: 5px;
+     width: 52.5px;
+     height: 1px;
+     background-color: $font-black-light;
+     transform: rotate(-40deg)
+}
+
+@mixin spanCounterAndLine {
+     display: inline-block;
+     width: 52.5px;
+     height: 49.5px;
+     position: relative;
+     margin-right: 15.5px;
+     font-size: 20px;
+}
+
+@mixin waterMark {
+     position: relative;
+     font-family: 'Poppins', sans-serif;
+     font-weight: 500;
+     font-size: 70px;
+     text-align: center;
+     margin: 20px auto 20px auto;
+     z-index: 111;
+     color: $font-black-50;
+}
+
+@mixin wateMarkBefore {
+     content: "our services";
+     position: absolute;
+     font-weight: 700;
+     font-size: 160px;
+     text-transform: uppercase;
+     left: 0;
+     top: 50%;
+     transform: translateY(-50%);
+     text-align: center;
+     width: 100%;
+     color: rgba($color: $font-black-light, $alpha: 0.1)
+}
+
+@mixin ScrollBar {
+     ::-webkit-scrollbar {
+          width: 5px !important;
+     }
+
+     /* Track */
+     ::-webkit-scrollbar-track {
+          background: #dbd9d9;
+          width: 5px !important;
+     }
+
+     /* Handle */
+     ::-webkit-scrollbar-thumb {
+          background: rgb(176, 176, 176);
+          border-radius: 5px;
+          width: 5px !important;
+     }
+
+     /* Handle on hover */
+     ::-webkit-scrollbar-thumb:hover {
+          background: rgb(156, 156, 156);
+     }
+}
+
+@mixin lineTab {
+     content: none;
+     position: absolute;
+     width: 40%;
+     height: 3px;
+     background-color: $font-secondary;
+     bottom: 7px;
+     left: 20px;
+}
+
+//////////////////////////////////////////////
+// Use this with Mobile First
+//////////////////////////////////////////////
+
+$breakpoints: ('xs': 0,
+     'sm': 576px,
+     'md': 768px,
+     'lg': 992px,
+     'xl': 1200px,
+     'xxl': 1500px,
+     );
+
+//use max if use desktop first  --- mobile first change it to min
+@mixin mq($width, $type: min) {
+     @if map_has_key($breakpoints, $width) {
+          $width: map_get($breakpoints, $width);
+
+          @if $type==min {
+               // $width: $width - 1px;
+               $width: $width;
+          }
+
+          @media only screen and (#{$type}-width: $width) {
+               @content;
+          }
+     }
+}
+
+//////////////////////////////////////////////
+// CSS TEXT trim - ellipsis
+//////////////////////////////////////////////
+
+@mixin text-shorten {
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+}
+
+
+@mixin ellipse-rows($num) {
+     overflow: hidden;
+     text-overflow: ellipsis;
+     display: -webkit-box;
+     -webkit-line-clamp: $num;
+     -webkit-box-orient: vertical;
+}

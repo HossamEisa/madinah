@@ -1,0 +1,18 @@
+:root {
+    font-size: 16px;
+    background: url("https://i.ibb.co/HV7c0BF/test-2.jpg");
+
+    @include mq('xxl') {
+        font-size: 18px;
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: $font-text;
+    overflow-x: hidden;
+    direction: $direction;
+    text-align: $left;
+    @extend %scroll;
+    opacity: 0.7;
+}

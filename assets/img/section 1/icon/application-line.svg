@@ -1,0 +1,6 @@
+<svg id="application-line" xmlns="http://www.w3.org/2000/svg" width="24" height="21" viewBox="0 0 24 21">
+  <path id="Path_52137" data-name="Path 52137" d="M5,7H6.5V8.5H5Z" transform="translate(-2.75 -4.75)" fill="#fd0"/>
+  <path id="Path_52138" data-name="Path 52138" d="M9,7h1.5V8.5H9Z" transform="translate(-3.75 -4.75)" fill="#fd0"/>
+  <path id="Path_52139" data-name="Path 52139" d="M13,7h1.5V8.5H13Z" transform="translate(-4.75 -4.75)" fill="#fd0"/>
+  <path id="Path_52140" data-name="Path 52140" d="M24.5,4H3.5A1.5,1.5,0,0,0,2,5.5v18A1.5,1.5,0,0,0,3.5,25h21A1.5,1.5,0,0,0,26,23.5V5.5A1.5,1.5,0,0,0,24.5,4ZM3.5,5.5h21V8.65H3.5Zm0,18V9.85h21V23.5Z" transform="translate(-2 -4)" fill="#fd0"/>
+</svg>

@@ -1,0 +1,138 @@
+
+
+.search-box {
+  opacity: 0;
+  transition: opacity 1s;
+
+  &.fade {
+    opacity: 1;
+    transition: all 1s;
+    z-index: 11111111111111;
+  }
+
+  position: absolute;
+  top: 20px;
+  #{$right}: 20px;
+  width: 35%;
+  background-color: #F3EFE5;
+
+  input {
+    border: none;
+
+    &::placeholder {
+      font-size: 14px;
+    }
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      position: relative;
+      padding: 10px 10px 10px 0;
+      margin-#{$left}: 25px;
+
+      a {
+        font-size: 13px;
+        font-weight: 400;
+        color: black;
+        text-decoration: none;
+      }
+
+      &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        #{$left}: 0;
+        width: 50%;
+        height: 0.5px;
+        background-color: rgba($color: $font-black-light, $alpha: 0.2);
+      }
+    }
+  }
+
+  .search-container {
+    background-color: white;
+    border-radius: 0 0 6px 6px;
+    box-shadow: $box-shadow;
+    padding: 15px 25px 15px 25px;
+
+    .search-icon {
+      font-size: 14px;
+      width: 40px;
+      height: 40px;
+      background-color: $font-primary;
+      border-radius: 50%;
+      @include flexCentar;
+      margin-#{$right}: 10px;
+    }
+
+    .close-icon {
+      font-size: 16px;
+      width: 40px;
+      height: 40px;
+      border: 1px solid black;
+      border-radius: 50%;
+      @include flexCentar;
+      cursor: pointer;
+
+    }
+  }
+}
+
+
+
+@media (max-width: 1310px) {
+
+  .search-icon,
+  .close-icon {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 1240px) {
+  #search {
+    width: 310px;
+  }
+}
+
+@media (max-width: 350px) {
+  #search {
+    width: 280px;
+    #{$right}: 5px;
+    top: 5px;
+
+    ul {
+      li {
+        margin-#{$left}: 10px !important;
+      }
+    }
+
+    .search-container {
+      padding: 15px 25px 15px 10px;
+    }
+
+    a {
+      font-size: 12px;
+    }
+
+    input::placeholder {
+      font-size: 13px;
+    }
+
+    .search-icon,
+    .close-icon {
+      width: 25px !important;
+      height: 25px !important;
+      font-size: 11px !important;
+    }
+  }
+}

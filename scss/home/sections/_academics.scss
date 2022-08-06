@@ -1,0 +1,265 @@
+#academics {
+  overflow-x: hidden;
+  padding: 50px 0;
+
+  @include mq('xxl') {
+    padding: 100px 0 50px;
+  }
+
+  h2 {
+    @include waterMark;
+
+    @include mq('xxl') {
+      font-size: 97px;
+    }
+
+    &::before {
+      @include wateMarkBefore;
+      content: 'Academics'
+    }
+  }
+
+  .mySwiperAcademics {
+    .swiper-slide {
+      @include containerCounter;
+
+      .academics-card {
+        padding-#{$left}: 75px;
+        padding-top: 50px;
+        transition: 0.5s;
+        background-image: url('../../assets/img/academics/Mask\ Group\ 48-2.svg');
+        background-repeat: no-repeat;
+        background-position: top $right;
+        height: 350px;
+        position: relative;
+        box-shadow: $box-shadow;
+        padding-bottom: 40px;
+
+        @include mq('xxl') {
+          height: 440px;
+        }
+
+        &::before {
+          content: '';
+          background-image: linear-gradient(to $right, #826A51 0%, #ED1A3B 100%);
+          #{$left}: 0px;
+          #{$right}: 0px;
+          bottom: 0px;
+          height: 3px;
+          position: absolute;
+        }
+
+        img {
+          margin-bottom: 40px;
+
+          @include mq('xxl') {
+            width: 80px;
+            height: 80px;
+          }
+        }
+
+        h5 {
+          width: 90%;
+
+          @include mq('xxl') {
+            font-size: 30px;
+          }
+        }
+
+
+
+        .academics-counter {
+          span {
+            @include spanCounterAndLine;
+            position: absolute;
+            #{$left}: 12px;
+
+            &::after {
+              @include line;
+            }
+
+            &::before {
+              @include counter;
+            }
+          }
+        }
+
+        .academics-card-link {
+          width: 100%;
+          padding-#{$right}: 10px;
+
+          a {
+            text-decoration: none;
+            color: $font-secondary;
+            font-size: 16px;
+            font-weight: 500;
+            opacity: 0;
+            transition: 0.5s;
+          }
+
+          i {
+            color: $font-text;
+            padding-inline-end: 30px;
+          }
+
+        }
+
+        &:hover .academics-card-link {
+          a {
+            opacity: 1;
+          }
+
+          i {
+            color: $font-secondary;
+          }
+        }
+
+        &:hover {
+          background-image: url('../../assets/img/academics/Mask\ Group\ 48.svg');
+        }
+      }
+    }
+
+  }
+
+  .btns {
+    position: absolute;
+    #{$right}: 40px;
+    top: -75px;
+    z-index: 333;
+
+    .swiper-button {
+      width: 45px;
+      height: 45px;
+      background-color: $font-white;
+      z-index: 3;
+      border-radius: 100%;
+      @include flexCentar;
+      color: $font-white;
+
+      &.next {
+        background-color: $font-secondary;
+        border-radius: 50%;
+      }
+
+      &.prev {
+        background-color: $font-secondary;
+        border-radius: 50%;
+        margin-#{$right}: 30px;
+      }
+
+      &.swiper-button-disabled {
+        border: 1px solid #999;
+        color: #999;
+        background-color: $font-white;
+      }
+    }
+  }
+
+  .academics-button {
+    @include btnYallow;
+    padding: 5px 22px;
+    margin-top: 50px;
+
+    a {
+      text-decoration: none;
+      color: $font-text;
+    }
+  }
+}
+
+@media (min-width: 1480px) and (max-width: 1649px) {
+  #academics {
+    h2 {
+
+      &::before {
+        font-size: 150px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1480px) and (max-width: 1649px) {
+  #academics {
+    h2 {
+
+      &::before {
+        font-size: 140px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1140px) and (max-width: 1279px) {
+  #academics {
+    h2 {
+
+      &::before {
+        font-size: 130px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+  #academics {
+    h2 {
+      font-size: 60px;
+
+      &::before {
+        font-size: 80px;
+      }
+    }
+
+    .academics-button {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .btns {
+      position: static;
+      margin-block: 20px 20px;
+      justify-content: center !important;
+
+      .swiper-button {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  #academics {
+    h2 {
+      font-size: 40px;
+      margin: 20px auto;
+
+      &::before {
+        font-size: 70px;
+      }
+    }
+
+
+  }
+}
+
+@media (max-width: 780px) {
+
+  #academics {
+    .container-fluid {
+      padding: 0;
+      padding-inline-start: 25px;
+    }
+
+    h2 {
+      font-size: 40px;
+      margin: 15px auto;
+
+      &::before {
+        content: none !important;
+      }
+    }
+  }
+}
