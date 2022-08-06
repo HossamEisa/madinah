@@ -216,6 +216,21 @@
      .image-journals {
           position: relative;
           width: fit-content;
+          margin: 0 auto;
+          height: 100%;
+
+          img {
+               object-fit: cover;
+               width: 100%;
+
+               @include mq('xxl') {
+                    max-height: 537px;
+               }
+          }
+
+          @include mq('xl') {
+               width: 100%;
+          }
 
           .image-journals-content {
                background-color: white;
@@ -396,7 +411,7 @@
 
           @include mq('xxl') {
                ul {
-                    padding: 80px 70px 0 15px;
+                    padding: 38px 70px 38px 25px;
                }
           }
 
@@ -423,10 +438,6 @@
                          color: $font-secondary;
                          border-radius: 5px;
                          font-size: 22px;
-
-                         @include mq('xxl') {
-                              font-size: 32px;
-                         }
 
                          &::after {
                               content: "\f30b";
@@ -464,7 +475,8 @@
                          font-family: "Font Awesome 6 free";
                          font-weight: 900;
                          position: absolute;
-                         top: 36%;
+                         top: 50%;
+                         transform: translateY(-50%);
                          #{$right}: 20%;
                          z-index: 33;
                          font-weight: 700;
@@ -649,9 +661,11 @@
                border: 1px solid #999;
                color: #999;
                background-color: $font-white;
+               pointer-events: none;
           }
      }
 }
+
 
 @media (min-width: 1650px) {
      #mediu-center {
@@ -891,7 +905,6 @@
           .mySwiperMEDIU {
                .swiper-slide {
                     width: auto;
-                    margin-inline-start: 20px;
 
                     .desc {
                          font-size: 16px;

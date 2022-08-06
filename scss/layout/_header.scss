@@ -4,6 +4,7 @@
                max-width: 1300px;
           }
      }
+
      @include mq('xxl') {
           .container {
                max-width: 1670px;
@@ -41,21 +42,29 @@
           .navbar-collapse {
                justify-content: start;
 
-
+               @include mq('xxl') {
+                    justify-content: end;
+                    margin-inline-end: 19%;
+               }
 
                .navbar-nav {
                     .nav-item {
+                         margin-inline: 10px;
+
+                         @include mq('xxl') {
+                              margin-inline: 5px;
+                         }
+
                          .nav-link {
                               color: $font-white;
                               font-size: calcRem(15);
                               line-height: calcRem(30);
 
                               @include mq('xxl') {
-                                   font-size: calcRem(16);
+                                   font-size: calcRem(15);
                               }
                          }
 
-                         margin-inline: 10px;
                     }
                }
           }
@@ -126,26 +135,6 @@
                border-radius: 10px 10px 0 0;
           }
      }
-
-     @media (min-width: 1810px) {
-          .navbar {
-               .navbar-collapse {
-                    justify-content: center;
-                    margin-inline-end: 50px;
-               }
-          }
-     }
-
-     // (max-width: 1809px)
-     @media (min-width: 1650px) and (max-width: 2045px) {
-          .navbar {
-               .navbar-collapse {
-                    justify-content: center;
-                    margin-inline-end: 30%;
-               }
-          }
-     }
-
 
      @media (min-width: 1480px) and (max-width: 1650px) {
           .navbar {
@@ -302,7 +291,7 @@
                          left: -100%;
                          position: absolute;
                          height: 100%;
-                         transition: 1s ease;
+                         transition: 0.5s ease;
                          box-shadow: 1px 1px 15px #ccc;
                          text-align: $left;
 
