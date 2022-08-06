@@ -151,10 +151,14 @@
             bottom: 100%;
             #{$right}: 0;
             background-color: $font-primary;
-            padding: calcRem(30);
+            padding: calcRem(10);
             border-radius: 5px;
             display: flex;
             align-items: center;
+
+            @include mq('lg') {
+              padding: calcRem(30);
+            }
 
             .statics-counter {
               display: inline-block;
@@ -165,7 +169,7 @@
                 margin-#{$right}: 0;
                 font-weight: bold;
 
-                
+
 
                 &::before {
                   position: absolute;
@@ -175,6 +179,7 @@
                   font-size: 20px;
                   font-weight: 400;
                   color: #434343;
+
                 }
 
                 &::after {
@@ -185,9 +190,13 @@
             }
 
             .number {
-              font-size: 22px;
+              font-size: 15;
               font-weight: bold;
               margin-bottom: 0;
+
+              @include mq('lg') {
+                font-size: 22px;
+              }
             }
 
             .statistics-tiltle {

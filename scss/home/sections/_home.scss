@@ -24,7 +24,7 @@ $homeHeight-xxl: 840px;
                display: flex;
                flex-direction: column;
                justify-content: center;
-               width: 50%;
+               width: 65%;
                color: $font-white;
                padding-inline-start: 30px;
 
@@ -270,7 +270,7 @@ $homeHeight-xxl: 840px;
                          }
 
                          .box {
-                              font-size: 15px;
+                              font-size: calcRem(15);
                               line-height: 30px;
                               font-weight: 400;
                               color: $font-white;
