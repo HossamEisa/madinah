@@ -164,6 +164,17 @@ $homeHeight-xxl: 840px;
           }
 
           .swiper-button {
+
+               &.swiper-button-next,
+               &.swiper-button-prev {
+                    top: inherit;
+                    margin: 0;
+                    #{$left}: inherit;
+                    &::after {
+                         display: none;
+                    }
+               }
+
                width: 45px;
                height: 45px;
                background-color: $font-white;
@@ -172,6 +183,8 @@ $homeHeight-xxl: 840px;
                border-radius: 100%;
                color: $font-text;
                @include flexCentar;
+
+
 
                &.next {
                     bottom: 13%;
@@ -197,6 +210,8 @@ $homeHeight-xxl: 840px;
                          #{$right}: 32.2%;
                     }
                }
+
+
 
           }
 

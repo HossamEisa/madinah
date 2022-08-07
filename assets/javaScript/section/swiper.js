@@ -3,8 +3,8 @@
 export let swiperHome = new Swiper("#home .mySwiperHome", {
 
      navigation: {
-          nextEl: ".swiper-button.next",
-          prevEl: ".swiper-button.prev",
+          nextEl: "#home .swiper-button-next",
+          prevEl: "#home .swiper-button-prev",
      },
      // autoplay: {
      //      delay: 10000,
