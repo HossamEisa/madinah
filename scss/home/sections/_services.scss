@@ -19,8 +19,6 @@
 
   h2 {
     @include waterMark;
-    text-align: $left;
-    padding-top: 70px;
 
     @include mq('xxl') {
       font-size: 97px;

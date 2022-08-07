@@ -27,8 +27,8 @@ export let swiperMEDIU = new Swiper(".mySwiperMEDIU", {
      slidesPerView: "auto",
      spaceBetween: 15,
      navigation: {
-          nextEl: "#mediu-center .swiper-button.next",
-          prevEl: "#mediu-center .swiper-button.prev",
+          nextEl: ".swiper-button.next",
+          prevEl: ".swiper-button.prev",
      },
      breakpoints: {
 
@@ -97,8 +97,8 @@ export let swiperAcademics = new Swiper(".mySwiperAcademics", {
           disableOnInteraction: false,
      },
      navigation: {
-          nextEl: "#academics .swiper-button.next",
-          prevEl: "#academics .swiper-button.prev"
+          nextEl: ".academicsSwiper .swiper-button.next",
+          prevEl: ".academicsSwiper .swiper-button.prev"
      },
      breakpoints: {
           1114: {
@@ -143,8 +143,8 @@ export let mySwiperHome3 = new Swiper(".mySwiperHome3", {
           disableOnInteraction: false,
      },
      navigation: {
-          nextEl: "#academics .swiper-button.next",
-          prevEl: "#academics .swiper-button.prev"
+          nextEl: ".slide-wapper-3-small .swiper-button.next",
+          prevEl: ".slide-wapper-3-small .swiper-button.prev"
      },
      breakpoints: {
           400: {
@@ -175,6 +175,55 @@ export let swiperApplay = new Swiper(".mySwiperApplay", {
      },
 });
 
+
+
+export let swiperMEDIUNews = new Swiper(".News .mySwiperMEDIU", {
+     slidesPerView: "auto",
+     spaceBetween: 15,
+     navigation: {
+          nextEl: ".News .swiper-button.next",
+          prevEl: ".News .swiper-button.prev",
+     },
+     breakpoints: {
+
+          992: {
+               slidesPerView: 2.5,
+               spaceBetween: 15,
+          },
+          720: {
+               slidesPerView: 2.5,
+               spaceBetween: 15,
+          },
+          400: {
+               slidesPerView: 1.5,
+               spaceBetween: 15,
+          },
+     },
+});
+
+export let swiperMEDIUEvents = new Swiper(".Events .mySwiperMEDIU", {
+     slidesPerView: "auto",
+     spaceBetween: 15,
+     navigation: {
+          nextEl: ".Events .swiper-button.next",
+          prevEl: ".Events .swiper-button.prev",
+     },
+     breakpoints: {
+
+          992: {
+               slidesPerView: 2.5,
+               spaceBetween: 15,
+          },
+          720: {
+               slidesPerView: 2.5,
+               spaceBetween: 15,
+          },
+          400: {
+               slidesPerView: 1.5,
+               spaceBetween: 15,
+          },
+     },
+});
 
 // swiper in journals in mediu
 export let swiperJournals = new Swiper(".swiperJournals", {

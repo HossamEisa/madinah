@@ -74,7 +74,7 @@
      }
 
      .image-tab1-4 {
-          background-image: url("../../../assets/img/mediu center/7.png");
+          background-image: url("../../../assets/img/mediu center/7.jpg");
           background-size: cover;
           background-position: center center;
           height: 536px;
@@ -87,7 +87,7 @@
 
      .image-tab2-4 {
           //-----------
-          background-image: url("../../../assets/img/mediu center/7.png");
+          background-image: url("../../../assets/img/mediu center/7.jpg");
           background-size: cover;
           background-position: center center;
           height: 550px;
@@ -105,7 +105,7 @@
      .apply-box {
           padding: 20px 40px 20px 20px;
           justify-content: center;
-          width: 32%;
+          width: 100%;
           background-color: white;
           position: relative;
 
@@ -410,6 +410,10 @@
           padding: 19px 5px;
 
           @include mq('xxl') {
+               height: 536px;
+               display: flex;
+               align-items: center;
+
                ul {
                     padding: 38px 70px 38px 25px;
                }
@@ -437,7 +441,6 @@
                          background-color: $font-white;
                          color: $font-secondary;
                          border-radius: 5px;
-                         font-size: 22px;
 
                          &::after {
                               content: "\f30b";
@@ -680,6 +683,10 @@
 
                .mySwiperMEDIU-2 {
                     height: 89%;
+
+                    @include mq('xxl') {
+                         height: 89.5%;
+                    }
                }
           }
 
