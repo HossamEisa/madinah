@@ -6,7 +6,9 @@ import {
      swiperDiscussions,
      swiperHome,
      swiperJournals,
-     swiperMEDIU,
+     // swiperMEDIU,
+     swiperMEDIUNews,
+     swiperMEDIUEvents,
      swiperMediuTab3,
      swiperMediuTab32,
      swiperMediuTab4,
@@ -18,7 +20,9 @@ swiperHome
 mySwiperHome3
 swiperApplay
 swiperAcademics
-swiperMEDIU
+// swiperMEDIU
+swiperMEDIUNews
+swiperMEDIUEvents,
 swiperMediuTab3
 swiperMediuTab32
 swiperDiscussions

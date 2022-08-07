@@ -1,51 +1,48 @@
 // Swiper Js
 
-export let swiperHome = new Swiper("#home .mySwiperHome", {
+export let swiperHome = new Swiper(".mySwiperHome", {
 
      navigation: {
           nextEl: "#home .swiper-button-next",
           prevEl: "#home .swiper-button-prev",
      },
-     // autoplay: {
-     //      delay: 10000,
-     //      disableOnInteraction: false,
-     // },
+   
 });
 
 export let swiperServices = new Swiper(".mySwiperServices", {
      spaceBetween: 50,
      navigation: {
-          nextEl: "#services .swiper-button.next",
-          prevEl: "#services .swiper-button.prev",
+          nextEl: ".swiperServicesWrapper .swiper-button.next",
+          prevEl: ".swiperServicesWrapper .swiper-button.prev",
      },
 });
 
 
 
 
-export let swiperMEDIU = new Swiper(".mySwiperMEDIU", {
-     slidesPerView: "auto",
-     spaceBetween: 15,
-     navigation: {
-          nextEl: ".swiper-button.next",
-          prevEl: ".swiper-button.prev",
-     },
-     breakpoints: {
+// export let swiperMEDIU = new Swiper(".mySwiperMEDIU", {
+//      slidesPerView: "auto",
+//      spaceBetween: 15,
+//      navigation: {
+//           nextEl: ".swiper-button.next",
+//           prevEl: ".swiper-button.prev",
+//      },
+//      breakpoints: {
 
-          992: {
-               slidesPerView: 2.5,
-               spaceBetween: 15,
-          },
-          720: {
-               slidesPerView: 2.5,
-               spaceBetween: 15,
-          },
-          400: {
-               slidesPerView: 1.5,
-               spaceBetween: 15,
-          },
-     },
-});
+//           992: {
+//                slidesPerView: 2.5,
+//                spaceBetween: 15,
+//           },
+//           720: {
+//                slidesPerView: 2.5,
+//                spaceBetween: 15,
+//           },
+//           400: {
+//                slidesPerView: 1.5,
+//                spaceBetween: 15,
+//           },
+//      },
+// });
 export let swiperMediuTab3 = new Swiper(".mySwiperMEDIU.tab-3", {
      spaceBetween: 10,
      slidesPerView: 4,
