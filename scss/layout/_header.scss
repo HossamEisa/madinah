@@ -61,7 +61,7 @@
                               line-height: calcRem(30);
 
                               @include mq('xxl') {
-                                   font-size: calcRem(15);
+                                   font-size: calcRem(17);
                               }
                          }
 
@@ -135,26 +135,6 @@
                border-radius: 10px 10px 0 0;
           }
      }
-
-     @media (min-width: 1480px) and (max-width: 1650px) {
-          .navbar {
-               .navbar-collapse {
-                    justify-content: center;
-                    margin-inline-end: 45%;
-
-                    .nav-item {
-                         margin-inline: 2px !important;
-                    }
-
-                    .nav-link {
-                         padding-inline: 0;
-                    }
-               }
-          }
-     }
-
-
-
 
 
      @media (min-width: 1320px) and (max-width: 1380px) {
@@ -351,12 +331,73 @@
      }
 
      @media (min-width: 1139px) and (max-width: 1185px) {
-          .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
-               font-size: 12px !important;
-          }
 
           .navbar img {
                width: 190px !important;
+          }
+     }
+
+
+
+     &.inner {
+          background: url('../img/inner-header.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+
+          @include mq('xl') {
+               .container {
+                    max-width: 1140px;
+               }
+          }
+
+          @include mq('xxl') {
+               .container {
+                    max-width: 1670px;
+               }
+          }
+
+          .navbar .navbar-collapse {
+               margin-inline-end: initial;
+               justify-content: end;
+
+               .navbar-nav {
+                    .nav-item {
+                         margin-inline: 0;
+
+                         @include mq('xl') {
+                              margin-inline: 5px;
+                         }
+
+                         @include mq('xxl') {
+                              margin-inline: 10px;
+                         }
+
+                         .nav-link {}
+                    }
+               }
+          }
+
+          .headerbtn {
+               padding: 0px 20px;
+               background-color: #fd0;
+               color: #000;
+               border-radius: 50px;
+               font-size: 16px;
+               line-height: 40px;
+               font-weight: 500;
+               flex-shrink: 0;
+          }
+
+          .search {
+               width: 45px;
+               height: 45px;
+               border: 1px solid #fd0;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               cursor: pointer;
+               flex-shrink: 0;
+
           }
      }
 }

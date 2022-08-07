@@ -77,9 +77,13 @@ swiperServices.on('slideChange', function () {
 
 const searchBox = document.querySelector('.search-box');
 const searchIcon = document.getElementById('search-icon');
+const searchIconMob = document.getElementById('search-icon-mob');
 const closeSearch = document.getElementById('close-search');
 
 searchIcon.addEventListener('click', () => {
+     searchBox.classList.toggle('fade');
+})
+searchIconMob.addEventListener('click', () => {
      searchBox.classList.toggle('fade');
 })
 closeSearch.addEventListener(('click'), () => {

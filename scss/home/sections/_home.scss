@@ -170,6 +170,7 @@ $homeHeight-xxl: 840px;
                     top: inherit;
                     margin: 0;
                     #{$left}: inherit;
+
                     &::after {
                          display: none;
                     }
@@ -231,7 +232,6 @@ $homeHeight-xxl: 840px;
           @include mq('xxl') {
                height: $homeHeight-xxl - 80px;
                width: 22.3%;
-
           }
 
           .academic-side {
@@ -676,3 +676,12 @@ $homeHeight-xxl: 840px;
 // }
 
 @media (max-width: 768px) {}
+
+@media (min-width: 1700px) {
+     .home {
+          .container {
+               max-width: 1670px !important;
+          }
+
+     }
+}

@@ -6,7 +6,7 @@ export let swiperHome = new Swiper(".mySwiperHome", {
           nextEl: "#home .swiper-button-next",
           prevEl: "#home .swiper-button-prev",
      },
-   
+
 });
 
 export let swiperServices = new Swiper(".mySwiperServices", {
@@ -267,15 +267,15 @@ export let swiperDiscussions = new Swiper(".swiper-discussions", {
 });
 
 
-const btnAutoPlay = document.querySelector('.swiper-button.auto')
+const btnAutoPlay = document.querySelector('.swiper-button.auto');
 
 
-
-
-export let autoPlay = btnAutoPlay.addEventListener('click', (e) => {
-     if (swiperServices.autoplay.running == false) {
-          swiperServices.autoplay.start()
-     } else {
-          swiperServices.autoplay.stop()
-     }
-})
+if (btnAutoPlay) {
+     btnAutoPlay.addEventListener('click', (e) => {
+          if (swiperServices.autoplay.running == false) {
+               swiperServices.autoplay.start()
+          } else {
+               swiperServices.autoplay.stop()
+          }
+     });
+}
