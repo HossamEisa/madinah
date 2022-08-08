@@ -80,12 +80,18 @@ const searchIcon = document.getElementById('search-icon');
 const searchIconMob = document.getElementById('search-icon-mob');
 const closeSearch = document.getElementById('close-search');
 
-searchIcon.addEventListener('click', () => {
-     searchBox.classList.toggle('fade');
-})
-searchIconMob.addEventListener('click', () => {
-     searchBox.classList.toggle('fade');
-})
-closeSearch.addEventListener(('click'), () => {
-     searchBox.classList.remove('fade')
-})
+if (searchIcon) {
+     searchIcon.addEventListener('click', () => {
+          searchBox.classList.toggle('fade');
+     })
+}
+if (searchIconMob) {
+     searchIconMob.addEventListener('click', () => {
+          searchBox.classList.toggle('fade');
+     })
+}
+if (closeSearch) {
+     closeSearch.addEventListener(('click'), () => {
+          searchBox.classList.remove('fade')
+     })
+}

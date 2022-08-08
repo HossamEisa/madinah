@@ -273,7 +273,7 @@ const btnAutoPlay = document.querySelector('.swiper-button.auto');
 if (btnAutoPlay) {
      btnAutoPlay.addEventListener('click', (e) => {
           if (swiperServices.autoplay.running == false) {
-               swiperServices.autoplay.start()
+               swiperServices.autoplay.start();
           } else {
                swiperServices.autoplay.stop()
           }
