@@ -171,21 +171,24 @@
 }
 
 .contact {
-  background-color: $font-primary;
-  width: fit-content;
-  padding: 20px 40px;
-  font-size: 25px;
-  font-weight: 400;
-  border-radius: 10px 10px 0 0;
-  transform: rotate(-90deg) translateX(35%);
   position: fixed;
   bottom: 20%;
   #{$right}: 0;
-  transform-origin: bottom $right;
-  text-align: center;
-  text-decoration: none;
-  color: black;
   z-index: 33333333;
+  text-decoration: none;
+  >span {
+    background-color: $font-primary;
+    width: fit-content;
+    padding: 20px 40px;
+    font-size: 25px;
+    font-weight: 400;
+    border-radius: 10px 10px 0 0;
+    transform: rotate(-90deg) translateX(35%);
+    transform-origin: bottom $right;
+    text-align: center;
+    color: black;
+    display: flex;
+  }
 
   p {
     margin-bottom: 0;

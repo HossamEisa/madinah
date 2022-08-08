@@ -1,15 +1,7 @@
 .header {
-     @include mq('xl') {
-          .container {
-               max-width: 1300px;
-          }
-     }
 
-     @include mq('xxl') {
-          .container {
-               max-width: 1670px;
-          }
-     }
+
+
 
      .navbar {
           .dropdown-menu {
@@ -177,23 +169,20 @@
 
      @media (min-width: 1140px) and (max-width: 1319px) {
           .navbar {
-               .container {
-                    max-width: 1300px;
 
-                    .navbar-collapse {
-                         margin-inline-start: 0;
+               .navbar-collapse {
+                    margin-inline-start: 0;
 
-                         .navbar-nav {
-                              .nav-item {
-                                   margin-inline: 3px;
+                    .navbar-nav {
+                         .nav-item {
+                              margin-inline: 3px;
 
-                                   .nav-link {
-                                        padding-inline: 0;
-                                        font-size: 13px;
-                                   }
+                              .nav-link {
+                                   padding-inline: 0;
+                                   font-size: 13px;
                               }
-
                          }
+
                     }
                }
           }
@@ -201,23 +190,20 @@
 
      @media (min-width: 1140px) and (max-width: 1190px) {
           .navbar {
-               .container {
-                    max-width: 1300px;
 
-                    .navbar-collapse {
-                         margin-inline-start: 0;
+               .navbar-collapse {
+                    margin-inline-start: 0;
 
-                         .navbar-nav {
-                              .nav-item {
-                                   margin-inline: 2px;
+                    .navbar-nav {
+                         .nav-item {
+                              margin-inline: 2px;
 
-                                   .nav-link {
-                                        padding-inline: 0 !important;
-                                        font-size: 13px;
-                                   }
+                              .nav-link {
+                                   padding-inline: 0 !important;
+                                   font-size: 13px;
                               }
-
                          }
+
                     }
                }
           }
@@ -226,24 +212,21 @@
 
      @media (min-width: 992px) and (max-width: 1139px) {
           .navbar {
-               .container {
-                    max-width: 920px;
 
-                    .navbar-collapse {
-                         justify-content: end;
-                         margin-inline-start: 0;
+               .navbar-collapse {
+                    justify-content: end;
+                    margin-inline-start: 0;
 
-                         .navbar-nav {
-                              .nav-item {
-                                   margin-inline: 4px;
+                    .navbar-nav {
+                         .nav-item {
+                              margin-inline: 4px;
 
-                                   .nav-link {
-                                        padding-inline: 0;
-                                        font-size: 13px;
-                                   }
+                              .nav-link {
+                                   padding-inline: 0;
+                                   font-size: 13px;
                               }
-
                          }
+
                     }
                }
           }
@@ -308,22 +291,6 @@
      }
 
 
-     @media (min-width: 768px) and (max-width: 992px) {
-          .navbar {
-               .container {
-                    max-width: 840px;
-               }
-          }
-     }
-
-     @media (min-width: 540px) and (max-width: 768px) {
-          .navbar {
-               .container {
-                    max-width: 720px;
-               }
-          }
-     }
-
      @media (min-width: 1139px) and (max-width: 1250px) {
           .navbar-expand-lg .navbar-nav .dropdown-menu.lang {
                #{$left}: -30% !important;
@@ -344,37 +311,24 @@
           background-size: cover;
           background-repeat: no-repeat;
 
-          @include mq('xl') {
-               .container {
-                    max-width: 1140px;
-               }
-          }
-
-          @include mq('xxl') {
-               .container {
-                    max-width: 1400px;
-               }
-          }
-
           .navbar .navbar-collapse {
                margin-inline-end: initial;
                justify-content: end;
 
-               .navbar-nav {
-                    .nav-item {
-                         margin-inline: 0;
+               // .navbar-nav {
+               //      .nav-item {
+               //           margin-inline: 0;
 
-                         @include mq('xl') {
-                              margin-inline: 5px;
-                         }
+               //           @include mq('xl') {
+               //                margin-inline: 5px;
+               //           }
 
-                         @include mq('xxl') {
-                              margin-inline: 10px;
-                         }
+               //           @include mq('xxl') {
+               //                margin-inline: 10px;
+               //           }
 
-                         .nav-link {}
-                    }
-               }
+               //      }
+               // }
           }
 
           .headerbtn {
