@@ -20,6 +20,7 @@
           // End
           .dropdown-menu {
                #{$left}: -80% !important;
+               border: none;
           }
 
 
@@ -83,6 +84,7 @@
                          padding: 0;
                          background-color: transparent;
                          justify-content: flex-end;
+                         overflow: visible;
                     }
 
                     .nav-item {
@@ -127,8 +129,10 @@
      }
 
      .navbar-expand-lg .navbar-nav .dropdown-menu {
-          padding: 10px 15px 0 15px;
-          #{$left}: 2% !important;
+          @include mq('lg') {
+               padding: 10px 15px 0 15px;
+               #{$left}: 2% !important;
+          }
 
           &.lang {
                #{$left}: 25% !important;
@@ -187,6 +191,11 @@
                top: -6px;
                #{$left}: 0;
                border-radius: 10px 10px 0 0;
+               opacity: 0;
+
+               @include mq('lg') {
+                    opacity: 1;
+               }
           }
      }
 
