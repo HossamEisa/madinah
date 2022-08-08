@@ -471,9 +471,6 @@ $homeHeight-xxl: 840px;
           }
      }
 
-     #home .container {
-          max-width: 920px;
-     }
 }
 
 @media (max-width: 991px) {
@@ -537,10 +534,6 @@ $homeHeight-xxl: 840px;
           #side-bar {
                display: none;
           }
-     }
-
-     #home .container {
-          max-width: 840px;
      }
 
 }
@@ -629,59 +622,6 @@ $homeHeight-xxl: 840px;
           }
      }
 
-     #home .container {
-          max-width: 720px;
-     }
+  
 }
 
-// @media (max-width: 670px) {
-//      #home {
-//           .mySwiperHome {
-//                .content-swiper {
-//                     width: 95%;
-//                     margin-inline: auto;
-
-//                     .titel-swiper {
-//                          font-size: 22px;
-//                          line-height: 30px;
-//                          width: 40%;
-//                     }
-
-//                     &.two .titel-swiper {
-//                          font-size: 22px;
-//                          line-height: 30px;
-//                          width: 100%;
-//                     }
-
-//                     &.two .desc-swiper {
-//                          font-size: 20px;
-//                          line-height: 36px;
-//                     }
-
-//                     .desc {
-//                          font-size: 15px;
-//                          margin-block: 10px 20px !important;
-//                     }
-
-//                     .desc-swiper {
-//                          font-size: 18px;
-//                          margin-bottom: 0;
-//                     }
-//                }
-
-
-
-//           }
-//      }
-// }
-
-@media (max-width: 768px) {}
-
-@media (min-width: 1700px) {
-     .home {
-          .container {
-               max-width: 1670px !important;
-          }
-
-     }
-}
