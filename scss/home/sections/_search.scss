@@ -63,7 +63,11 @@
     background-color: white;
     border-radius: 0 0 6px 6px;
     box-shadow: $box-shadow;
-    padding: 15px 25px 15px 25px;
+    padding: 15px 5px;
+
+    @include mq('xl') {
+      padding: 15px 25px 15px 25px;
+    }
 
     .search-icon {
       font-size: 14px;
