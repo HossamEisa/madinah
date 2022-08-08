@@ -188,12 +188,11 @@
     font-size: 20px;
     font-weight: 400;
     border-radius: 10px 10px 0 0;
-    transform: rotate(-90deg) translateX(35%);
-    transform-origin: bottom $right;
+    // transform-origin: bottom $right;
     text-align: center;
     color: black;
     display: flex;
-
+    transform: rotate(-90deg);
     @include mq('md') {
       padding: 20px 40px;
       font-size: 25px;

@@ -10,7 +10,6 @@
 body {
     font-family: 'Poppins', sans-serif;
     color: $font-text;
-    overflow-x: hidden;
     direction: $direction;
     text-align: $left;
     @extend %scroll;
