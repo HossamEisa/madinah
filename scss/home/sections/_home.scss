@@ -231,8 +231,10 @@ $homeHeight-xxl: 840px;
 
           @include mq('xxl') {
                height: $homeHeight-xxl - 80px;
-               width: 22.3%;
+               width: 25%;
           }
+
+       
 
           .academic-side {
                border-#{$right}: $border-light;
@@ -400,7 +402,7 @@ $homeHeight-xxl: 840px;
 .social-media {
      padding-block-end: 85px;
      position: fixed;
-     bottom: 23%;
+     bottom: 33%;
      #{$right}: 10px;
      z-index: 999;
      display: none;
@@ -444,7 +446,7 @@ $homeHeight-xxl: 840px;
 
           .mySwiperHome {
                .content-swiper {
-                    width: 80%;
+                    width: 65%;
 
                     &.three {
                          width: 100%;
@@ -466,9 +468,7 @@ $homeHeight-xxl: 840px;
                }
           }
 
-          #side-bar {
-               display: none;
-          }
+
      }
 
 }
@@ -622,6 +622,5 @@ $homeHeight-xxl: 840px;
           }
      }
 
-  
-}
 
+}

@@ -31,7 +31,6 @@
 
   .tab-small {
     padding: 0 30px;
-    display: none;
 
 
     .tab-list-small {
@@ -676,10 +675,6 @@
       }
     }
 
-    .col-md-3:first-child {
-      display: none;
-    }
-
     .conta-slider .mySwiperServices .service-card .service-card-content {
       transform: translateY(-90%);
       padding: 15px 20px;
@@ -691,9 +686,6 @@
       line-height: 32px;
     }
 
-    .tab-small {
-      display: block;
-    }
 
     .service-content {
       margin-top: 0;

@@ -21,5 +21,6 @@ $container-max-widths: (
   xxl: 1475px,
 );
 
+$enable-negative-margins: true;
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

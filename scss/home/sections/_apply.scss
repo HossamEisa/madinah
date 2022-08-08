@@ -193,11 +193,6 @@
     text-align: center;
     color: black;
     display: flex;
-
-    @include mq('md') {
-      padding: 20px 40px;
-      font-size: 25px;
-    }
   }
 
   p {
