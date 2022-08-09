@@ -83,34 +83,42 @@
                                         aria-expanded="false">
                                         About MEDIU
                                    </a>
-                                   <ul class="dropdown-menu dropdown-menu-white">
+                                   <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton">
                                         <span></span>
                                         <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li>
-                                             <a class="dropdown-item d-flex justify-content-between align-items-center"
-                                                  href="#">
-                                                  Submenu
-                                                  <img src="./assets/img/section/icon/Path 52158.svg" width="10px"
-                                                       height="10px" alt="">
-                                             </a>
-                                             <ul class="dropdown-menu dropdown-submenu">
-                                                  <li>
-                                                       <a class="dropdown-item" href="#">Submenu item 1</a>
-                                                  </li>
-                                                  <li>
-                                                       <a class="dropdown-item" href="#">Submenu item 2</a>
+                                        <li class="dropdown dropend">
+                                             <a class="dropdown-item dropdown-toggle" href="#" id="dropdown-layouts"
+                                                  data-bs-toggle="dropdown" aria-haspopup="true"
+                                                  aria-expanded="false">Layouts</a>
+                                             <ul class="dropdown-menu" aria-labelledby="dropdown-layouts">
+                                                  <span></span>
+                                                  <li><a class="dropdown-item" href="#">Basic</a></li>
+                                                  <li><a class="dropdown-item" href="#">Compact Aside</a></li>
+                                                  <li class="dropdown dropend">
+
+                                                       <a class="dropdown-item dropdown-toggle" href="#"
+                                                            id="dropdown-layouts" data-bs-toggle="dropdown"
+                                                            aria-haspopup="true" aria-expanded="false">Custom</a>
+                                                       <div class="dropdown-menu" aria-labelledby="dropdown-layouts">
+                                                            <span></span>
+                                                            <a class="dropdown-item" href="#">Fullscreen</a>
+                                                            <a class="dropdown-item" href="#">Empty</a>
+                                                            <a class="dropdown-item" href="#">Magic</a>
+                                                       </div>
                                                   </li>
                                              </ul>
                                         </li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
                                    </ul>
                               </li>
+
+
                               <li class="nav-item dropdown">
                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                         aria-expanded="false">
                                         Academics
                                    </a>
-                                   <ul class="dropdown-menu dropdown-menu-white">
+                                   <ul class="dropdown-menu ">
                                         <span></span>
                                         <li><a class="dropdown-item" href="#">Action</a></li>
                                         <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -122,7 +130,7 @@
                                         aria-expanded="false">
                                         Admissions
                                    </a>
-                                   <ul class="dropdown-menu dropdown-menu-white">
+                                   <ul class="dropdown-menu ">
                                         <span></span>
 
                                         <li><a class="dropdown-item" href="#">Action</a></li>
@@ -135,7 +143,7 @@
                                         aria-expanded="false">
                                         Careers
                                    </a>
-                                   <ul class="dropdown-menu dropdown-menu-white">
+                                   <ul class="dropdown-menu ">
                                         <span></span>
 
                                         <li><a class="dropdown-item" href="#">Action</a></li>
@@ -148,7 +156,7 @@
                                         aria-expanded="false">
                                         Portals
                                    </a>
-                                   <ul class="dropdown-menu dropdown-menu-white">
+                                   <ul class="dropdown-menu ">
                                         <span></span>
                                         <li><a class="dropdown-item" href="#">Action</a></li>
                                         <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -160,7 +168,7 @@
                                         aria-expanded="false">
                                         Journals
                                    </a>
-                                   <ul class="dropdown-menu dropdown-menu-white">
+                                   <ul class="dropdown-menu ">
                                         <span></span>
                                         <li><a class="dropdown-item" href="#">Action</a></li>
                                         <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -169,10 +177,10 @@
                               <li class="nav-item dropdown">
                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                         aria-expanded="false">
-                                        <i class="pe-2 fa-solid fa-globe"></i>
-                                        English
+                                        <span> <i class="pe-2 fa-solid fa-globe"></i>
+                                             English</span>
                                    </a>
-                                   <ul class="dropdown-menu lang dropdown-menu-white">
+                                   <ul class="dropdown-menu lang ">
                                         <span></span>
                                         <li><a style="text-align: end;" class="dropdown-item" href="#">العربية</a>
                                         </li>
@@ -183,7 +191,7 @@
                                         aria-expanded="false">
                                         Quick Links
                                    </a>
-                                   <ul class="dropdown-menu dropdown-menu-white">
+                                   <ul class="dropdown-menu ">
                                         <li>
                                              <a href="#" class="dropdown-item">
 
@@ -246,6 +254,20 @@
                                              </a>
                                         </li>
                                    </ul>
+                              </li>
+
+                              <li class="nav-item dropdown d-lg-none">
+                                   <div class="social-media">
+                                        <a href="#" class=" mx-2 social-item youtube bg-light rounded-circle">
+                                             <i class="fa-brands fa-youtube"></i>
+                                        </a>
+                                        <a href="#" class=" mx-2 social-item twitter bg-light rounded-circle">
+                                             <i class="fa-brands fa-twitter"></i>
+                                        </a>
+                                        <a href="#" class=" mx-2 social-item facebook mb-0 bg-light rounded-circle">
+                                             <i class="fa-brands fa-facebook"></i>
+                                        </a>
+                                   </div>
                               </li>
                          </ul>
                     </div>
@@ -504,15 +526,15 @@
                </span>
           </a>
           <div class="social-media">
-               <div class="youtube bg-white rounded-circle">
+               <a class="social-item youtube bg-white rounded-circle">
                     <i class="fa-brands fa-youtube"></i>
-               </div>
-               <div class="twitter bg-white rounded-circle">
+               </a>
+               <a class="social-item twitter bg-white rounded-circle">
                     <i class="fa-brands fa-twitter"></i>
-               </div>
-               <div class="facebook mb-0 bg-white rounded-circle">
+               </a>
+               <a class="social-item facebook mb-0 bg-white rounded-circle">
                     <i class="fa-brands fa-facebook"></i>
-               </div>
+               </a>
           </div>
           <section class="apply">
                <div class="container">

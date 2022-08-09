@@ -234,7 +234,7 @@ $homeHeight-xxl: 840px;
                width: 25%;
           }
 
-       
+
 
           .academic-side {
                border-#{$right}: $border-light;
@@ -400,22 +400,27 @@ $homeHeight-xxl: 840px;
 }
 
 .social-media {
-     padding-block-end: 85px;
-     position: fixed;
-     bottom: 33%;
-     #{$right}: 10px;
-     z-index: 999;
-     display: none;
+     display: flex;
+
+     @include mq('lg') {
+          padding-block-end: 85px;
+          position: fixed;
+          bottom: 33%;
+          #{$right}: 10px;
+          z-index: 999;
+     }
+
 
      @include mq('lg') {
           display: block;
      }
 
-     &>div {
+     .social-item {
           width: 45px;
           height: 45px;
           @include flexCentar;
           margin-bottom: 12px;
+          text-decoration: none;
           cursor: pointer;
 
           i {
