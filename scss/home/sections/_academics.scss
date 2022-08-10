@@ -6,7 +6,7 @@
     padding: 60px 50px;
   }
 
-  h2 {
+  .section-title {
     @include waterMark;
 
     @include mq('xxl') {
@@ -17,7 +17,7 @@
       @include wateMarkBefore;
       content: 'Academics'
     }
-  }
+  } 
 
   .mySwiperAcademics {
     .swiper-slide {
@@ -58,11 +58,12 @@
           }
         }
 
-        h5 {
+        .swiper-title {
           width: 90%;
+          font-size: 1rem;
 
           @include mq('xxl') {
-            font-size: 30px;
+            font-size: 1.25rem;
           }
         }
 
