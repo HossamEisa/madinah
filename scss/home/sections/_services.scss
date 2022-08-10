@@ -264,7 +264,12 @@
       }
 
       &:not(:last-child) {
-        margin-bottom: 40px;
+        margin-bottom: 25px;
+
+        @include mq('xxl') {
+          margin-bottom: 40px;
+
+        }
       }
 
       &::before {
@@ -415,6 +420,7 @@
       .statistics-tiltle {
         font-size: 25px;
         font-weight: 500;
+
         @include mq('xl') {
           font-size: 20px;
         }
@@ -490,7 +496,7 @@
     .services-list {
       li {
         a {
-          margin-inline-end: 10px;
+          margin-#{$left}: 10px;
         }
 
         &.active a {
@@ -561,7 +567,7 @@
         font-size: 15px;
 
         a {
-          margin-inline-end: 10px;
+          margin-#{$left}: 10px;
         }
 
         &.active a {
@@ -576,7 +582,7 @@
 
 @media (max-width: 1251px) {
   #services {
- 
+
 
     h2 {
       font-size: 70px;
