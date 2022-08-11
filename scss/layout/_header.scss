@@ -65,7 +65,11 @@
 
 
           >.dropdown-menu {
-               margin-#{$left}: 0;
+               margin-#{$left}: 15px;
+
+               @include mq('lg') {
+                    margin-#{$left}: 0;
+               }
           }
      }
 
@@ -77,12 +81,16 @@
           }
 
           li {
-               a, h5 {
+
+               a,
+               h5 {
                     border-bottom: 1px solid rgba($color: #707070, $alpha: 0.1);
                }
 
                &:last-child {
-                    a, h5 {
+
+                    a,
+                    h5 {
                          border-bottom: none;
                     }
                }

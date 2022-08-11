@@ -1,6 +1,7 @@
 #mediu-center {
      background-color: $bg-mediu-center;
      overflow-x: hidden;
+     @include ScrollBar;
 
      @include mq('xxl') {
           padding-bottom: 50px !important;
@@ -167,9 +168,14 @@
           overflow-y: hidden;
           padding: 0 30px;
           display: none;
-          @include ScrollBar;
+
+          &::-webkit-scrollbar {
+               height: 4px;
+          }
 
           .tab-list-small {
+
+
                li {
                     font-size: 19px;
                     color: $font-text;
@@ -210,7 +216,6 @@
 
      .swiper-journals {
           height: 570px;
-          margin-bottom: 30px;
      }
 
      .image-journals {
@@ -691,6 +696,15 @@
           }
 
      }
+
+     .tab-mediu-content.News {
+          img {
+               width: 100%;
+               object-fit: cover;
+               max-height: 536px;
+          }
+     }
+
 }
 
 @media (min-width: 1480px) and (max-width: 1649px) {
@@ -862,6 +876,8 @@
                }
           }
      }
+
+
 }
 
 @media (max-width: 500px) {
@@ -902,7 +918,7 @@
 
           .tab-small {
                display: block;
-               padding: 0;
+               margin-bottom: 20px;
           }
 
           .col-md-9 {
@@ -927,14 +943,24 @@
           }
 
           .btns {
-               position: static;
-               margin-block: 10px 20px;
-               justify-content: center !important;
+               // position: static;
+               // margin-block: 10px 20px;
+               // justify-content: center !important;
+               position: absolute;
+               top: 40%;
+               right: 0;
+               left: 0;
+               transform: translateY(-50%);
+               width: 100%;
+               display: flex !important;
+               justify-content: space-between !important;
+               padding: 0 30px;
 
                .swiper-button {
                     width: 30px;
                     height: 30px;
                     font-size: 14px;
+                    box-shadow: 0px 0px 10px #ccc;
                }
           }
 
@@ -985,6 +1011,14 @@
           }
 
 
+     }
+
+     .tab-mediu-content.News {
+          text-align: center;
+
+          img {
+               max-height: 300px !important;
+          }
      }
 }
 

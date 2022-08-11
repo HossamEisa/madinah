@@ -170,44 +170,6 @@
   transition: 2s all;
 }
 
-.contact {
-  position: fixed;
-  bottom: 200px;
-  #{$right}: 0;
-  z-index: 33333333;
-  text-decoration: none;
-
-  @include mq('md') {
-    bottom: 250px;
-  }
-
-  >span {
-    background-color: $font-primary;
-    width: fit-content;
-    padding: 10px 25px;
-    font-size: 20px;
-    font-weight: 400;
-    border-radius: 10px 10px 0 0;
-    transform: rotate(-90deg) translateX(35%);
-    transform-origin: bottom $right;
-    text-align: center;
-    color: black;
-    display: flex;
-  }
-
-  p {
-    margin-bottom: 0;
-  }
-
-  i {
-    margin-#{$right}: 25px;
-    transform: rotate(90deg);
-  }
-
-  &:hover {
-    color: $font-text;
-  }
-}
 
 
 

@@ -175,24 +175,28 @@ export let swiperApplay = new Swiper(".mySwiperApplay", {
 
 
 export let swiperMEDIUNews = new Swiper(".News .mySwiperMEDIU", {
-     slidesPerView: "auto",
      spaceBetween: 15,
+     slidesPerView: 1,
      navigation: {
           nextEl: ".News .swiper-button.next",
           prevEl: ".News .swiper-button.prev",
      },
      breakpoints: {
 
+          1200: {
+               slidesPerView: 2.5,
+               spaceBetween: 0,
+          },
           992: {
                slidesPerView: 2.5,
                spaceBetween: 15,
           },
           720: {
-               slidesPerView: 2.5,
+               slidesPerView: 2,
                spaceBetween: 15,
           },
           400: {
-               slidesPerView: 1.5,
+               slidesPerView: 1,
                spaceBetween: 15,
           },
      },

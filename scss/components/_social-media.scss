@@ -1,0 +1,53 @@
+.social-media {
+    display: flex;
+
+    @include mq('lg') {
+         padding-block-end: 10px;
+         position: fixed;
+         bottom: 0%;
+         #{$right}: 10px;
+         z-index: 999;
+    }
+
+
+    @include mq('lg') {
+         display: block;
+    }
+
+    .social-item {
+         width: 45px;
+         height: 45px;
+         @include flexCentar;
+         margin-bottom: 12px;
+         text-decoration: none;
+         cursor: pointer;
+
+         @include mq('lg') {
+              width: 32px;
+              height: 32px;
+         }
+
+         @include mq('xxl') {
+              width: 45px;
+              height: 45px;
+         }
+
+         i {
+              font-size: 20px;
+         }
+    }
+
+    .youtube {
+         color: #FF0000;
+    }
+
+    .twitter {
+         color: #0090FF;
+    }
+
+    .facebook {
+         color: #4458B6;
+    }
+}
+
+

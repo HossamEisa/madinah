@@ -81,7 +81,10 @@ const searchIconMob = document.getElementById('search-icon-mob');
 const closeSearch = document.getElementById('close-search');
 
 if (searchIcon) {
-     searchIcon.addEventListener('click', () => {
+     searchIcon.addEventListener('click', (e) => {
+          console.log(e.target);
+          console.log(this);
+          console.log(searchIcon);
           searchBox.classList.toggle('fade');
      })
 }
@@ -95,6 +98,9 @@ if (closeSearch) {
           searchBox.classList.remove('fade')
      })
 }
+
+
+
 (function ($bs) {
      const CLASS_NAME = 'has-child-dropdown-show';
      $bs.Dropdown.prototype.toggle = function (_orginal) {
