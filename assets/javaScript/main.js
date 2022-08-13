@@ -126,21 +126,51 @@ if (closeSearch) {
           });
      });
 
-     // for hover
-     document.querySelectorAll('.dropdown-hover, .dropdown-hover-all .dropdown').forEach(function (dd) {
-          dd.addEventListener('mouseenter', function (e) {
-               let toggle = e.target.querySelector(':scope>[data-bs-toggle="dropdown"]');
-               if (!toggle.classList.contains('show')) {
-                    $bs.Dropdown.getOrCreateInstance(toggle).toggle();
-                    dd.classList.add(CLASS_NAME);
-                    $bs.Dropdown.clearMenus();
-               }
-          });
-          dd.addEventListener('mouseleave', function (e) {
-               let toggle = e.target.querySelector(':scope>[data-bs-toggle="dropdown"]');
-               if (toggle.classList.contains('show')) {
-                    $bs.Dropdown.getOrCreateInstance(toggle).toggle();
-               }
-          });
-     });
 })(bootstrap);
+
+
+//toggle dropdown menu open/close
+var toClose = false
+
+function toggle(e) {
+     e.stopPropagation();
+     var btn = this;
+     var menu = btn.children[1];
+     btn.classList.toggle('menuOpen');
+
+
+     while (menu && menu.nodeType != 1) {
+          menu = menu.children[1]
+     }
+     if (!menu) return;
+     if (menu.style.display !== 'block') {
+          menu.style.display = 'block';
+          if (toClose) toClose.style.display = "none";
+          toClose = menu;
+     } else {
+          menu.style.display = 'none';
+          toClose = false;
+     }
+
+};
+
+function closeAll() {
+     toClose.style.display = 'none';
+     toClose = false
+};
+
+window.addEventListener("DOMContentLoaded", function () {
+     document.querySelectorAll(".menu-item-has-children").forEach(function (btn) {
+          btn.addEventListener("click", function(e){
+               e.preventDefault();
+          });
+          btn.addEventListener("click", toggle, true);
+
+     });
+});
+
+window.onclick = function (event) {
+     if (toClose) {
+          closeAll.call(event.target);
+     }
+};
