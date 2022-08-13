@@ -128,49 +128,9 @@ if (closeSearch) {
 
 })(bootstrap);
 
-
-//toggle dropdown menu open/close
-var toClose = false
-
-function toggle(e) {
-     e.stopPropagation();
-     var btn = this;
-     var menu = btn.children[1];
-     btn.classList.toggle('menuOpen');
-
-
-     while (menu && menu.nodeType != 1) {
-          menu = menu.children[1]
-     }
-     if (!menu) return;
-     if (menu.style.display !== 'block') {
-          menu.style.display = 'block';
-          if (toClose) toClose.style.display = "none";
-          toClose = menu;
-     } else {
-          menu.style.display = 'none';
-          toClose = false;
-     }
-
-};
-
-function closeAll() {
-     toClose.style.display = 'none';
-     toClose = false
-};
-
-window.addEventListener("DOMContentLoaded", function () {
-     document.querySelectorAll(".menu-item-has-children").forEach(function (btn) {
-          btn.addEventListener("click", function(e){
-               e.preventDefault();
-          });
-          btn.addEventListener("click", toggle, true);
-
+jQuery.noConflict();
+(function ($) {
+     $(function () {
+        
      });
-});
-
-window.onclick = function (event) {
-     if (toClose) {
-          closeAll.call(event.target);
-     }
-};
+})(jQuery);
