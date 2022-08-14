@@ -86,20 +86,7 @@ footer {
 }
 
 
-// media quary
-@media (min-width: 1480px) {
-  #footer {
-    .container {
-      width: 100%;
-    }
 
-    p,
-    span,
-    a {
-      font-size: 15px;
-    }
-  }
-}
 
 @media (min-width: 1320px) and (max-width: 1479px) {
   #footer {
@@ -303,4 +290,32 @@ footer {
       transform: rotate(180deg);
     }
   }
+}
+
+.footer_nav {
+  columns: 1;
+  list-style: none;
+  font-size: calcRem(14);
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+
+
+  li {
+    line-height: 1.6;
+    width: 100%;
+    margin-bottom: 10px;
+
+    @include mq('sm') {
+      width: 50%;
+    }
+
+    @include mq('lg') {
+      width: 25%;
+    }
+  }
+
 }

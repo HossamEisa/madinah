@@ -36,11 +36,16 @@
                     }
                }
           }
-          > img {
-               @include mq('xxl') {
-                    height: 536px;
+
+          >img {
+               @include mq('lg') {
+                    height: 396px;
                     width: 100%;
                     object-fit: cover;
+               }
+
+               @include mq('xxl') {
+                    height: 536px;
                }
           }
 
@@ -249,8 +254,12 @@
                object-fit: cover;
                width: 100%;
 
+               @include mq('lg') {
+                    height: 396px;
+               }
+
                @include mq('xxl') {
-                    max-height: 537px;
+                    height: 536px;
                }
           }
 
@@ -434,6 +443,13 @@
      .tabs {
           background-color: $font-primary;
           padding: 19px 5px;
+          height: 396px;
+          display: flex;
+          align-items: center;
+
+          @include mq('lg') {
+               height: 396px;
+          }
 
           @include mq('xxl') {
                height: 536px;
@@ -446,10 +462,11 @@
           }
 
           ul {
+
                .item {
-                    padding: 25px 45px;
+                    padding: 15px 45px;
                     position: relative;
-                    font-size: 20px;
+                    font-size: 18px;
                     font-weight: 400;
                     transition: 0.5s;
                     color: $font-text;
@@ -457,10 +474,11 @@
                     cursor: pointer;
                     margin-bottom: 5px;
 
+                 
+
                     @include mq('xxl') {
                          padding: 15px 71.4px;
                          font-size: 18px;
-
                     }
 
                     &.active {
@@ -563,6 +581,20 @@
 
           &.News {
                display: block;
+
+               .swiper-slide {
+                    >img {
+                         @include mq('lg') {
+                              height: 396px;
+                              width: 100%;
+                              object-fit: cover;
+                         }
+
+                         @include mq('xxl') {
+                              height: 536px;
+                         }
+                    }
+               }
           }
      }
 
@@ -783,21 +815,6 @@
                }
           }
 
-          .tabs {
-               padding: 15px 5px;
-
-               ul {
-                    .item {
-                         padding: 15px 40px;
-                         padding-inline-end: 0;
-                         font-size: 18px;
-
-                         &:hover {
-                              font-size: 20px;
-                         }
-                    }
-               }
-          }
 
           .mySwiperMEDIU {
                .swiper-slide {
@@ -830,21 +847,7 @@
                }
           }
 
-          .tabs {
-               padding: 11px 5px;
 
-               ul {
-                    .item {
-                         padding: 14px 40px;
-                         font-size: 17px;
-                         padding-inline-end: 0;
-
-                         &:hover {
-                              font-size: 19px;
-                         }
-                    }
-               }
-          }
 
           .mySwiperMEDIU {
                .swiper-slide {
@@ -1115,7 +1118,7 @@
 
 @media (min-width: 1141px) and (max-width: 1278px) {
      .discussions-content {
-          height: 366px !important;
+          height: 396px !important;
 
           .discussions-header {
                padding-top: 25px !important;
@@ -1186,22 +1189,12 @@
 }
 
 
-@media (min-width: 1481px) and (max-width: 1512px) {
-     #mediu-center .image-tab1-4 {
-          height: 570px !important;
+#mediu-center .image-tab1-4 {
+     @include mq('xl') {
+          height: 396px;
      }
-}
 
-@media (min-width: 1141px) and (max-width: 1278px) {
-     #mediu-center .image-tab1-4 {
-          height: 395px !important;
-     }
-}
-
-.fa-arrow-right-long {
-     @at-root {
-          [dir="rtl"] & {
-               transform: rotate(180deg);
-          }
+     @include mq('xxl') {
+          height: 536px;
      }
 }

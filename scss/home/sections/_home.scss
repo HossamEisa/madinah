@@ -17,6 +17,16 @@ $homeHeight-xxl: 840px;
           .swiper-slide {
                background-position: top $left;
                height: 100%;
+
+               @at-root {
+                    [dir="rtl"]  &{
+                         transform: scaleX(-1);
+
+                         > .container {
+                              transform: scaleX(-1);
+                         }
+                    }
+               }
           }
 
           .content-swiper {
