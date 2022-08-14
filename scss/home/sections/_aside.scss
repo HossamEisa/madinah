@@ -13,9 +13,14 @@
         display: block;
     }
 
+    @include mq('lg') {
+        width: 300px;
+        height: $homeHeight - 20px;
+    }
+
     @include mq('xxl') {
         height: $homeHeight-xxl - 80px;
-        width: 25%;
+        width: 22%;
     }
 
     .academic-side {
@@ -66,13 +71,8 @@
                     }
                 }
 
-                @include mq('xxl') {
-                    padding-left: calcRem(15);
-                    margin: 22px 0;
-                }
-
                 .box {
-                    font-size: calcRem(15);
+                    font-size: calcRem(16);
                     line-height: 30px;
                     font-weight: 400;
                     color: $font-white;
@@ -80,7 +80,7 @@
 
                     @include mq('xxl') {
                         font-weight: 500;
-                        font-size: calcRem(16);
+                        font-size: calcRem(15);
                         margin-left: 4px;
                         line-height: 25.8px;
                     }
