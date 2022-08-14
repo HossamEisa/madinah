@@ -169,6 +169,7 @@
             border-radius: 5px;
             display: flex;
             align-items: center;
+            border-bottom-#{$right}-radius: 0;
 
             @include mq('lg') {
               padding: calcRem(20) calcRem(25);

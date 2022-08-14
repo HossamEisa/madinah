@@ -91,7 +91,7 @@
                     height: 11px;
                     position: absolute;
                     top: -10px;
-                    #{$left}: 0;
+                    #{$left}: -1px;
                     border-radius: 10px 10px 0 0;
                }
           }
@@ -298,9 +298,8 @@
                          #{$right}: 10px;
                          top: 25px;
                          border: none;
-                         transition: .3s ease;
                          transform: rotate(90deg);
-
+                         transition: transform .3s ease-in-out;
                     }
 
 

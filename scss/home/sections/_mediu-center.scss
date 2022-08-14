@@ -36,6 +36,13 @@
                     }
                }
           }
+          > img {
+               @include mq('xxl') {
+                    height: 536px;
+                    width: 100%;
+                    object-fit: cover;
+               }
+          }
 
           span {
                display: block;

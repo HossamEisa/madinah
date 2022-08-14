@@ -185,19 +185,15 @@ export let swiperMEDIUNews = new Swiper(".News .mySwiperMEDIU", {
 
           1200: {
                slidesPerView: 2.5,
-               spaceBetween: 0,
           },
           992: {
                slidesPerView: 2.5,
-               spaceBetween: 15,
           },
           720: {
                slidesPerView: 2,
-               spaceBetween: 15,
           },
           400: {
                slidesPerView: 1,
-               spaceBetween: 15,
           },
      },
 });

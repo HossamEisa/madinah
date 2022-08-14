@@ -13,9 +13,9 @@ jQuery(document).ready(function () {
 	"use strict";
 
 	/* Menu item custom colors */
-	(function ($) {
-		$('.menu-item > a[data-color]').each(function () {
-			$(this).attr('style', $(this).data('color'));
+	(function (jQuery) {
+		jQuery('.menu-item > a[data-color]').each(function () {
+			jQuery(this).attr('style', jQuery(this).data('color'));
 		});
 	})(jQuery);
 
@@ -35,26 +35,26 @@ jQuery(document).ready(function () {
 			cmsmasters_mov_bar('#navigation', '.current-menu-item');
 		}
 
-		function cmsmasters_mov_bar($selector, $reaction_class) {
+		function cmsmasters_mov_bar(jQueryselector, jQueryreaction_class) {
 
-			var parent_class_li = jQuery($selector).children();
-			var parent_class_li_r = jQuery($selector).children($reaction_class);
+			var parent_class_li = jQuery(jQueryselector).children();
+			var parent_class_li_r = jQuery(jQueryselector).children(jQueryreaction_class);
 
 			setTimeout(function () {
 				if (parent_class_li_r.length > 0) {
 					parent_class_li_r.addClass('cmsmasters_active');
 					var currentleft = parent_class_li_r.position().left;
 					var currentwidth = parent_class_li_r.css('width');
-					var parent_class_li_mov = jQuery($selector).children('.cmsmasters_mov_bar');
+					var parent_class_li_mov = jQuery(jQueryselector).children('.cmsmasters_mov_bar');
 					parent_class_li_mov.css({
 						"left": currentleft,
 						"width": currentwidth
 					});
 				} else {
 					parent_class_li.first().addClass('cmsmasters_active');
-					var currentleft = jQuery($selector + ' .cmsmasters_active').position().left + "px";
-					var currentwidth = jQuery($selector + ' .cmsmasters_active').css('width');
-					var parent_class_li_mov = jQuery($selector).children('.cmsmasters_mov_bar');
+					var currentleft = jQuery(jQueryselector + ' .cmsmasters_active').position().left + "px";
+					var currentwidth = jQuery(jQueryselector + ' .cmsmasters_active').css('width');
+					var parent_class_li_mov = jQuery(jQueryselector).children('.cmsmasters_mov_bar');
 					parent_class_li_mov.css({
 						"left": currentleft,
 						"width": currentwidth
@@ -64,9 +64,9 @@ jQuery(document).ready(function () {
 			parent_class_li.hover(function () {
 				parent_class_li.removeClass('cmsmasters_active');
 				jQuery(this).addClass('cmsmasters_active');
-				var currentleft = jQuery($selector + ' .cmsmasters_active').position().left + "px";
-				var currentwidth = jQuery($selector + ' .cmsmasters_active').css('width');
-				var parent_class_li_mov = jQuery($selector).children('.cmsmasters_mov_bar');
+				var currentleft = jQuery(jQueryselector + ' .cmsmasters_active').position().left + "px";
+				var currentwidth = jQuery(jQueryselector + ' .cmsmasters_active').css('width');
+				var parent_class_li_mov = jQuery(jQueryselector).children('.cmsmasters_mov_bar');
 				parent_class_li_mov.css({
 					"left": currentleft,
 					"width": currentwidth
@@ -76,16 +76,16 @@ jQuery(document).ready(function () {
 					parent_class_li_r.addClass('cmsmasters_active');
 					var currentleft = parent_class_li_r.position().left + "px";
 					var currentwidth = parent_class_li_r.css('width');
-					var parent_class_li_mov = jQuery($selector).children('.cmsmasters_mov_bar');
+					var parent_class_li_mov = jQuery(jQueryselector).children('.cmsmasters_mov_bar');
 					parent_class_li_mov.css({
 						"left": currentleft,
 						"width": currentwidth
 					});
 				} else {
 					parent_class_li.first().addClass('cmsmasters_active');
-					var currentleft = jQuery($selector + ' .cmsmasters_active').position().left + "px";
-					var currentwidth = jQuery($selector + ' .cmsmasters_active').css('width');
-					var parent_class_li_mov = jQuery($selector).children('.cmsmasters_mov_bar');
+					var currentleft = jQuery(jQueryselector + ' .cmsmasters_active').position().left + "px";
+					var currentwidth = jQuery(jQueryselector + ' .cmsmasters_active').css('width');
+					var parent_class_li_mov = jQuery(jQueryselector).children('.cmsmasters_mov_bar');
 					parent_class_li_mov.css({
 						"left": currentleft,
 						"width": currentwidth
@@ -161,8 +161,45 @@ jQuery(document).ready(function () {
 
 	/* Responsive Navigation Function Start */
 	(function ($) {
-		$('#navigation').cmsmastersResponsiveNav();
+		jQuery('#navigation').cmsmastersResponsiveNav();
+
+
+		var section = document.querySelector('#services');
+		var hasEntered = false;
+
+		window.addEventListener('scroll', (e) => {
+			var shouldAnimate = (window.scrollY + window.innerHeight) >= section.offsetTop;
+
+			if (shouldAnimate && !hasEntered) {
+				hasEntered = true;
+
+				$('.anim-value').each(function () {
+					$(this).prop('Counter', 0).animate({
+						Counter: $(this).text()
+					}, {
+						duration: 6000,
+						easing: 'swing',
+						step: function (now) {
+							$(this).text(Math.ceil(now));
+						}
+					});
+				});
+
+			}
+		});
 	})(jQuery);
+
+
+	if (jQuery('.counter-animation').length) {
+
+		//If you want to display decimal numbers, then instead of rounding the value with Math.ceil you can round up to 2 decimals for instance with value.toFixed(2):
+
+		// step: function () {
+		//   jQuerythis.text(this.Counter.toFixed(2));
+		// }
+	}
+
+
 
 
 });
