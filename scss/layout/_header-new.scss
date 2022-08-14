@@ -545,18 +545,30 @@
 }
 
 .header div>ul ul ul {
-     -webkit-transition: opacity .3s ease-in-out .1s, margin-#{$left} .3s ease-in-out .1s, margin-#{$right} .3s ease-in-out .1s;
-     -moz-transition: opacity .3s ease-in-out .1s, margin-#{$left} .3s ease-in-out .1s, margin-#{$right} .3s ease-in-out .1s;
-     -ms-transition: opacity .3s ease-in-out .1s, margin-#{$left} .3s ease-in-out .1s, margin-#{$right} .3s ease-in-out .1s;
-     -o-transition: opacity .3s ease-in-out .1s, margin-#{$left} .3s ease-in-out .1s, margin-#{$right} .3s ease-in-out .1s;
-     transition: opacity .3s ease-in-out .1s, margin-#{$left} .3s ease-in-out .1s, margin-#{$right} .3s ease-in-out .1s;
+     -webkit-transition: opacity .3s ease-in-out .1s,
+     margin-#{$left} .3s ease-in-out .1s,
+     margin-#{$right} .3s ease-in-out .1s;
+     -moz-transition: opacity .3s ease-in-out .1s,
+     margin-#{$left} .3s ease-in-out .1s,
+     margin-#{$right} .3s ease-in-out .1s;
+     -ms-transition: opacity .3s ease-in-out .1s,
+     margin-#{$left} .3s ease-in-out .1s,
+     margin-#{$right} .3s ease-in-out .1s;
+     -o-transition: opacity .3s ease-in-out .1s,
+     margin-#{$left} .3s ease-in-out .1s,
+     margin-#{$right} .3s ease-in-out .1s;
+     transition: opacity .3s ease-in-out .1s,
+     margin-#{$left} .3s ease-in-out .1s,
+     margin-#{$right} .3s ease-in-out .1s;
 }
 
 ///////////////////////////////////
 /// Start Menu DropDown
 ///////////////////////////
 
-.menu-main-menu-container {
+.menu-main-menu-container,
+.menu-main-menu-arabic-container,
+.menu-main-menu-malay-container {
      >ul {
           list-style: none;
           display: inline-block;
