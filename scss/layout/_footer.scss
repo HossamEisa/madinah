@@ -303,6 +303,10 @@ footer {
   margin: 0 auto;
   margin-bottom: 10px;
 
+  @include mq('sm') {
+    width: 100%;
+  }
+
 
   li {
     line-height: 1.6;
