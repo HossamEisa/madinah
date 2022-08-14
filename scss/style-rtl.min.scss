@@ -1,4 +1,6 @@
 $arabic: true;
 $direction: rtl;
 
-@import "./main";
+
+@import "./vendor/bootstrap_rtl"; 
+@import "./main"; 
