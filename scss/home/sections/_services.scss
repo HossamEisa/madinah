@@ -169,6 +169,7 @@
             border-radius: 5px;
             display: flex;
             align-items: center;
+            border-bottom-#{$right}-radius: 0;
 
             @include mq('lg') {
               padding: calcRem(20) calcRem(25);
@@ -182,7 +183,14 @@
                 margin-bottom: 20px;
                 margin-#{$right}: 0;
                 font-weight: bold;
-
+                &::after {
+                  @at-root {
+                    [dir="rtl"] & {
+                      transform: rotate(50deg);
+                    }
+                  }
+                }
+    
 
 
                 &::before {
@@ -318,6 +326,12 @@
             #{$right}: -30px;
             bottom: -20px;
             color: $font-secondary;
+
+            @at-root {
+              [dir="rtl"] & {
+                transform: rotate(180deg);
+              }
+            }
           }
         }
 
@@ -355,6 +369,12 @@
       border-radius: 100%;
       @include flexCentar;
       color: $font-white;
+
+      @at-root {
+        [dir="rtl"] & {
+          transform: rotate(0deg);
+        }
+      }
 
       &.next {
         background-color: $font-secondary;
@@ -439,6 +459,14 @@
         @include spanCounterAndLine;
         margin-bottom: 10px;
         margin-#{$right}: 0;
+        &::after {
+          @at-root {
+            [dir="rtl"] & {
+              transform: rotate(40deg);
+            }
+          }
+        }
+
 
         &::before {
           @include counter;

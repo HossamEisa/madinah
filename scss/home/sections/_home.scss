@@ -17,6 +17,16 @@ $homeHeight-xxl: 840px;
           .swiper-slide {
                background-position: top $left;
                height: 100%;
+
+               @at-root {
+                    [dir="rtl"]  &{
+                         transform: scaleX(-1);
+
+                         > .container {
+                              transform: scaleX(-1);
+                         }
+                    }
+               }
           }
 
           .content-swiper {
@@ -24,9 +34,17 @@ $homeHeight-xxl: 840px;
                display: flex;
                flex-direction: column;
                justify-content: center;
-               width: 65%;
+               width: 90%;
                color: $font-white;
                padding-inline-start: 30px;
+
+               @include mq('md') {
+                    width: 80%;
+               }
+
+               @include mq('lg') {
+                    width: 65%;
+               }
 
                @include mq('xxl') {
                     padding-inline-start: 0;
@@ -231,7 +249,6 @@ $homeHeight-xxl: 840px;
 
           .mySwiperHome {
                .content-swiper {
-                    width: 65%;
 
                     &.three {
                          width: 100%;
@@ -264,8 +281,6 @@ $homeHeight-xxl: 840px;
 
           .mySwiperHome {
                .content-swiper {
-                    width: 100%;
-
                     .titel-swiper {
                          font-size: 35px;
                          line-height: 45px;
@@ -357,7 +372,6 @@ $homeHeight-xxl: 840px;
 
           .mySwiperHome {
                .content-swiper {
-                    width: 80%;
                     margin-inline: auto;
 
                     &.two .desc-swiper {

@@ -87,6 +87,14 @@
       @include spanCounterAndLine;
 
       &::after {
+        @at-root {
+          [dir="rtl"] & {
+            transform: rotate(40deg);
+          }
+        }
+      }
+
+      &::after {
         @include line;
       }
 

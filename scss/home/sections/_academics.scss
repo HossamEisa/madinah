@@ -17,7 +17,7 @@
       @include wateMarkBefore;
       content: 'Academics'
     }
-  } 
+  }
 
   .mySwiperAcademics {
     .swiper-slide {
@@ -74,6 +74,14 @@
             @include spanCounterAndLine;
             position: absolute;
             #{$left}: 12px;
+
+            &::after {
+              @at-root {
+                [dir="rtl"] & {
+                  transform: rotate(40deg);
+                }
+              }
+            }
 
             &::after {
               @include line;
