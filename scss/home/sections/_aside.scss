@@ -1,11 +1,14 @@
 #side-bar {
     position: absolute;
     z-index: 9;
-    height: $homeHeight - 40px;
     background-color: $bg-sideBar;
     top: 0;
     #{$right}: 0;
     padding: 48px 10px 0 20px;
+    overflow: hidden;
+    display: none;
+    height: 100%;
+    @include ScrollBar;
 
     @at-root {
         [dir="rtl"] & {
@@ -14,20 +17,15 @@
         }
     }
 
-    overflow: hidden;
-    display: none;
-
     @include mq('lg') {
         display: block;
     }
 
     @include mq('lg') {
         width: 300px;
-        height: $homeHeight - 20px;
     }
 
     @include mq('xxl') {
-        height: $homeHeight-xxl - 80px;
         width: 22%;
     }
 
@@ -35,6 +33,7 @@
         width: 100%;
         display: flex;
         align-items: center;
+        padding-bottom: 20px;
 
         @include mq('xl') {
             padding-#{$right}: 5px;
@@ -44,6 +43,8 @@
 
         @include mq('xxl') {
             padding-#{$right}: 5px;
+            padding-bottom: 80px;
+
         }
 
         .btn-acad {
@@ -59,9 +60,14 @@
         .academic-list {
             margin-top: 40px;
             padding-#{$left}: 0;
+            max-height: 85%;
+            overflow: auto;
+            padding-top: 25px;
 
             @include mq('xxl') {
                 margin-top: 60px;
+                max-height: 90%;
+
             }
 
             .item {

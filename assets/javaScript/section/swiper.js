@@ -182,14 +182,10 @@ export let swiperMEDIUNews = new Swiper(".News .mySwiperMEDIU", {
           prevEl: ".News .swiper-button.prev",
      },
      breakpoints: {
-
-          1200: {
-               slidesPerView: 2.5,
-          },
           992: {
                slidesPerView: 2.5,
           },
-          720: {
+          567: {
                slidesPerView: 2,
           },
           400: {
@@ -206,18 +202,14 @@ export let swiperMEDIUEvents = new Swiper(".Events .mySwiperMEDIU", {
           prevEl: ".Events .swiper-button.prev",
      },
      breakpoints: {
-
           992: {
                slidesPerView: 2.5,
-               spaceBetween: 15,
           },
-          720: {
-               slidesPerView: 2.5,
-               spaceBetween: 15,
+          567: {
+               slidesPerView: 2,
           },
           400: {
-               slidesPerView: 1.5,
-               spaceBetween: 15,
+               slidesPerView: 1,
           },
      },
 });

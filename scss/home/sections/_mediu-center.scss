@@ -14,7 +14,13 @@
 
           &::before {
                @include wateMarkBefore;
-               content: "MEDIU Center"
+               content: ""attr(data-title)"";
+               display: none;
+               font-size: 140px;
+
+               @include mq('xl') {
+                    display: block;
+               }
           }
      }
 
@@ -193,15 +199,13 @@
           overflow-x: auto;
           overflow-y: hidden;
           padding: 0 30px;
-          display: none;
+          margin: 20px 0;
 
           &::-webkit-scrollbar {
                height: 4px;
           }
 
           .tab-list-small {
-
-
                li {
                     font-size: 19px;
                     color: $font-text;
@@ -451,6 +455,10 @@
                height: 396px;
           }
 
+          @include mq('xl') {
+               height: 396px;
+          }
+
           @include mq('xxl') {
                height: 536px;
                display: flex;
@@ -466,7 +474,7 @@
                .item {
                     padding: 15px 45px;
                     position: relative;
-                    font-size: 18px;
+                    font-size: 15px;
                     font-weight: 400;
                     transition: 0.5s;
                     color: $font-text;
@@ -474,7 +482,7 @@
                     cursor: pointer;
                     margin-bottom: 5px;
 
-                 
+
 
                     @include mq('xxl') {
                          padding: 15px 71.4px;
@@ -570,9 +578,20 @@
 
      .tab-mediu-content {
           display: none;
+          position: relative;
+
+          @include mq('xl') {
+               padding-#{$left}: 0;
+          }
 
           .btn-more {
                @include btnYallow;
+               margin: 0 auto;
+               display: block;
+
+               @include mq('xl') {
+                    margin: 0;
+               }
 
                &:hover {
                     border-color: transparent;
@@ -604,14 +623,21 @@
 
      .mySwiperMEDIU {
           .swiper-slide {
-               width: 40%;
+               text-align: center;
+               // width: 40%;
 
                .desc {
-                    font-size: 20px;
-                    line-height: 36px;
+                    font-size: 15px;
+                    line-height: 26px;
                     font-weight: 500;
-                    width: 80%;
-                    margin-top: 26px;
+                    margin-top: 15px;
+
+                    @include mq('lg') {
+                         font-size: 20px;
+                         line-height: 36px;
+                         margin-top: 26px;
+
+                    }
                }
           }
      }
@@ -620,8 +646,14 @@
           width: 100%;
 
           .mySwiperMEDIU-2 {
-               width: 80%;
-               height: 100%;
+               width: 100%;
+               height: 400px;
+
+               @include mq('xl') {
+                    width: 80%;
+                    height: 100%;
+               }
+
 
                .swiper-slide {
                     background-size: cover;
@@ -630,23 +662,48 @@
 
                .card {
                     bottom: 12%;
-                    padding: 46px 20px 30px 33px;
+                    padding: 20px 10px 20px 20px;
                     display: flex;
                     justify-content: center;
 
+                    @at-root {
+                         [dir="rtl"] & {
+                              padding: 20px 20px 20px 10px;
+                         }
+                    }
+
+                    @include mq('lg') {
+                         padding: 46px 20px 30px 33px;
+
+                         @at-root {
+                              [dir="rtl"] & {
+                                   padding: 46px 33px 30px 20px;
+                              }
+                         }
+                    }
+
                     .desc {
                          margin-bottom: 0;
-                         font-size: 27px;
-                         line-height: 32px;
+                         font-size: 20px;
+                         line-height: 24px;
                          font-weight: 500;
+
+                         @include mq('lg') {
+                              font-size: 27px;
+                              line-height: 32px;
+                         }
 
                     }
 
                     span {
-                         font-size: 18px;
+                         font-size: 16px;
                          display: block;
                          margin-bottom: 19px;
                          font-weight: 500;
+
+                         @include mq('lg') {
+                              font-size: 18px;
+                         }
                     }
 
                     a {
@@ -682,22 +739,18 @@
      }
 
      .mySwiperMEDIU.tab-3 {
-          height: 100%;
-
 
           .swiper-wrapper {
                display: flex;
-               flex-direction: column;
-               width: 300px;
-               height: 100%;
+               margin-top: 20px;
 
                .swiper-slide {
-                    width: 93% !important;
-                    height: 20%;
+                    width: 25%;
+                    height: 120px;
                     margin: 0 auto;
                     background-position: top center;
                     background-size: cover;
-                    margin-bottom: 15px
+                    margin-bottom: 15px;
                }
           }
 
@@ -708,9 +761,26 @@
 
 .btns {
      position: absolute;
-     #{$right}: 40px;
-     top: -75px;
+     #{$right}: 0;
+     top: 42%;
      z-index: 333;
+     transform: translate(0, -50%);
+     z-index: 2;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     padding: 0 15px;
+
+     @include mq('sm') {
+          top: 35%;
+     }
+
+
+     @include mq('xl') {
+          justify-content: flex-end;
+          top: -72px;
+
+     }
 
      .swiper-button {
           width: 45px;
@@ -730,12 +800,15 @@
           &.next {
                background-color: $font-secondary;
                border-radius: 50%;
+               #{$right}: 10px;
+
           }
 
           &.prev {
                background-color: $font-secondary;
                border-radius: 50%;
                margin-#{$right}: 30px;
+               #{$left}: 10px;
           }
 
           &.swiper-button-disabled {
@@ -748,445 +821,436 @@
 }
 
 
-@media (min-width: 1650px) {
-     #mediu-center {
-          .mySwiperMEDIU {
-               .swiper-slide {
-                    width: 36%;
-               }
-          }
-
-          .conta-tab-3 {
-               height: 600px;
-
-               .mySwiperMEDIU-2 {
-                    height: 89%;
-
-                    @include mq('xxl') {
-                         height: 89.5%;
-                    }
-               }
-          }
-
-     }
-
-     .tab-mediu-content.News {
-          img {
-               width: 100%;
-               object-fit: cover;
-               max-height: 536px;
-          }
-     }
-
-}
-
-@media (min-width: 1480px) and (max-width: 1649px) {
-     #mediu-center {
-          .title {
-
-               &::before {
-                    font-size: 150px;
-               }
-          }
-
-          .mySwiperMEDIU {
-               .swiper-slide {
-                    width: 43%;
-               }
-          }
-
-          .conta-tab-3 {
-               height: 600px;
-
-               .mySwiperMEDIU-2 {
-                    height: 89%;
-               }
-          }
-     }
-}
-
-@media (min-width: 1280px) and (max-width: 1480px) {
-     #mediu-center {
-
-          .title {
-
-               &::before {
-                    font-size: 140px;
-               }
-          }
-
-
-          .mySwiperMEDIU {
-               .swiper-slide {
-                    width: 36%;
-
-                    .desc {
-                         font-size: 17px;
-                         margin-top: 10px;
-                         line-height: 25px;
-                    }
-               }
-          }
-
-          .conta-tab-3 {
-               height: 446px;
-
-               .mySwiperMEDIU-2 {
-                    height: 89%;
-               }
-          }
-     }
-}
-
-@media (min-width: 1140px) and (max-width: 1279px) {
-     #mediu-center {
-          .title {
-
-               &::before {
-                    font-size: 130px;
-               }
-          }
-
-
-
-          .mySwiperMEDIU {
-               .swiper-slide {
-                    width: 38%;
-
-                    .desc {
-                         font-size: 16px;
-                         margin-top: 10px;
-                         line-height: 20px;
-                    }
-               }
-          }
-
-          .conta-tab-3 {
-               height: 446px;
-
-               .mySwiperMEDIU-2 {
-                    height: 89%;
-               }
-
-
-
-          }
-
-          .btn-more {
-               margin: 100px auto 0;
-          }
-     }
-}
-
-@media (min-width: 1140px) and (max-width: 1480px) {
-     .image-tab1-4 {
-          height: 395px !important;
-     }
-}
-
-@media (min-width: 1141px) and (max-width: 1480px) {
-     .swiper-journals {
-          height: 430px !important;
-     }
-
-     .swiper-slide-journals {
-          width: 300px !important;
-     }
-
-     .image-journals {
-          width: 300px;
-
-          .image-journals-content {
-               .address {
-                    font-size: 26px !important;
-               }
-
-               .date {
-                    font-size: 20px !important;
-               }
-          }
-     }
-}
-
-@media (min-width: 500px) and (max-width: 1000px) {
-     .image-journals {
-          .image-journals-content {
-               .address {
-                    font-size: 20px !important;
-               }
-
-               .date {
-                    font-size: 17px !important;
-               }
-          }
-     }
-
-
-}
-
-@media (max-width: 500px) {
-     .image-journals {
-          .image-journals-content {
-               .address {
-                    font-size: 18px !important;
-               }
-
-               .date {
-                    font-size: 15px !important;
-               }
-
-               a {
-                    font-size: 13px;
-               }
-          }
-     }
-}
-
-@media (max-width: 1140px) {
-     #mediu-center {
-          .container-fluid {
-               padding-inline-start: 15px !important;
-          }
-
-          .title {
-               font-size: 60px;
-
-               &::before {
-                    font-size: 80px;
-               }
-          }
-
-          .tabs {
-               display: none;
-          }
-
-          .tab-small {
-               display: block;
-               margin-bottom: 20px;
-          }
-
-          .col-md-9 {
-               width: 100%;
-          }
-
-          .mySwiperMEDIU {
-               .swiper-slide {
-                    width: auto;
-
-                    .desc {
-                         font-size: 16px;
-                         margin-top: 10px;
-                         line-height: 20px;
-                    }
-               }
-          }
-
-          .btn-more {
-               display: block;
-               margin: 100px auto 0;
-          }
-
-          .btns {
-               // position: static;
-               // margin-block: 10px 20px;
-               // justify-content: center !important;
-               position: absolute;
-               top: 40%;
-               right: 0;
-               left: 0;
-               transform: translateY(-50%);
-               width: 100%;
-               display: flex !important;
-               justify-content: space-between !important;
-               padding: 0 30px;
-
-               .swiper-button {
-                    width: 30px;
-                    height: 30px;
-                    font-size: 14px;
-                    box-shadow: 0px 0px 10px #ccc;
-               }
-          }
-
-          .conta-tab-3 {
-               height: 550px;
-               display: block !important;
-               padding-inline: 30px;
-
-               .mySwiperMEDIU-2 {
-                    width: 100%;
-                    height: 89%;
-               }
-
-               .mySwiperMEDIU.tab-3 {
-                    margin-block-start: 20px;
-
-                    .swiper-wrapper {
-                         display: flex;
-                         flex-direction: row;
-                         justify-content: center;
-                         width: 25%;
-                         margin-bottom: 15px;
-                    }
-               }
-          }
-     }
-}
-
-@media (max-width: 1020px) {
-     .image-tab1-4 {
-          display: none !important;
-     }
-
-     .image-tab2-4 {
-          display: flex !important;
-     }
-}
-
-@media (max-width: 992px) {
-     #mediu-center {
-          .title {
-               font-size: 40px;
-               margin: 20px auto;
-
-               &::before {
-                    font-size: 70px;
-               }
-          }
-
-
-     }
-
-     .tab-mediu-content.News {
-          text-align: center;
-
-          img {
-               max-height: 300px !important;
-          }
-     }
-}
-
-@media (max-width: 780px) {
-     #mediu-center {
-          .title {
-               font-size: 40px;
-               margin: 15px auto;
-
-               &::before {
-                    content: none !important;
-               }
-          }
-
-          .image {
-               .date {
-                    font-size: 27px;
-               }
-
-               .day {
-                    font-size: 16px;
-               }
-
-               .year {
-                    font-size: 16px;
-               }
-          }
-     }
-}
-
-@media (min-width: 1278px) and (max-width: 1490px) {
-     .discussions-content {
-          height: 394px !important;
-
-          .discussions-header {
-               padding-top: 50px !important;
-
-               .num {
-                    font-size: 33px !important;
-               }
-
-               h5 {
-                    font-size: 20px !important;
-               }
-
-               .des {
-                    font-size: 14px !important;
-               }
-          }
-     }
-
-}
-
-@media (min-width: 1141px) and (max-width: 1278px) {
-     .discussions-content {
-          height: 396px !important;
-
-          .discussions-header {
-               padding-top: 25px !important;
-
-               .num {
-                    font-size: 30px !important;
-               }
-
-               h5 {
-                    font-size: 18px !important;
-               }
-
-               .des {
-                    font-size: 13px !important;
-               }
-          }
-     }
-}
-
-@media (min-width: 500px) and (max-width: 1140px) {
-     .discussions-content {
-          height: 490px !important;
-
-          .discussions-header {
-               padding-top: 60px !important;
-
-               .num {
-                    font-size: 32px !important;
-               }
-
-               h5 {
-                    font-size: 20px !important;
-               }
-
-               .des {
-                    font-size: 15px !important;
-               }
-          }
-     }
-}
-
-@media (max-width: 500px) {
-     .discussions-content {
-          height: 490px !important;
-
-          .discussions-header {
-               padding-top: 60px !important;
-
-               .num {
-                    font-size: 29px !important;
-               }
-
-               h5 {
-                    font-size: 17px !important;
-               }
-
-               .des {
-                    font-size: 12px !important;
-               }
-          }
-
-          .discussions-footer {
-               p {
-                    font-size: 13px !important;
-               }
-          }
-     }
-}
+// @media (min-width: 1650px) {
+//      #mediu-center {
+//           .mySwiperMEDIU {
+//                .swiper-slide {
+//                     width: 36%;
+//                }
+//           }
+
+//           .conta-tab-3 {
+//                height: 600px;
+
+//                .mySwiperMEDIU-2 {
+//                     height: 89%;
+
+//                     @include mq('xxl') {
+//                          height: 89.5%;
+//                     }
+//                }
+//           }
+
+//      }
+
+//      .tab-mediu-content.News {
+//           img {
+//                width: 100%;
+//                object-fit: cover;
+//                max-height: 536px;
+//           }
+//      }
+
+// }
+
+// @media (min-width: 1480px) and (max-width: 1649px) {
+//      #mediu-center {
+//           .title {
+
+//                &::before {
+//                     font-size: 150px;
+//                }
+//           }
+
+//           .mySwiperMEDIU {
+//                .swiper-slide {
+//                     width: 43%;
+//                }
+//           }
+
+//           .conta-tab-3 {
+//                height: 600px;
+
+//                .mySwiperMEDIU-2 {
+//                     height: 89%;
+//                }
+//           }
+//      }
+// }
+
+// @media (min-width: 1280px) and (max-width: 1480px) {
+//      #mediu-center {
+
+//           .title {
+
+//                &::before {
+//                     font-size: 140px;
+//                }
+//           }
+
+
+//           .mySwiperMEDIU {
+//                .swiper-slide {
+//                     width: 36%;
+
+//                     .desc {
+//                          font-size: 17px;
+//                          margin-top: 10px;
+//                          line-height: 25px;
+//                     }
+//                }
+//           }
+
+//           .conta-tab-3 {
+//                height: 446px;
+
+//                .mySwiperMEDIU-2 {
+//                     height: 89%;
+//                }
+//           }
+//      }
+// }
+
+// @media (min-width: 1140px) and (max-width: 1279px) {
+//      #mediu-center {
+//           .title {
+
+//                &::before {
+//                     font-size: 130px;
+//                }
+//           }
+
+
+
+//           .mySwiperMEDIU {
+//                .swiper-slide {
+//                     width: 38%;
+
+//                     .desc {
+//                          font-size: 16px;
+//                          margin-top: 10px;
+//                          line-height: 20px;
+//                     }
+//                }
+//           }
+
+//           .conta-tab-3 {
+//                height: 446px;
+
+//                .mySwiperMEDIU-2 {
+//                     height: 89%;
+//                }
+
+
+
+//           }
+
+//           .btn-more {
+//                margin: 100px auto 0;
+//           }
+//      }
+// }
+
+// @media (min-width: 1140px) and (max-width: 1480px) {
+//      .image-tab1-4 {
+//           height: 395px !important;
+//      }
+// }
+
+// @media (min-width: 1141px) and (max-width: 1480px) {
+//      .swiper-journals {
+//           height: 430px !important;
+//      }
+
+//      .swiper-slide-journals {
+//           width: 300px !important;
+//      }
+
+//      .image-journals {
+//           width: 300px;
+
+//           .image-journals-content {
+//                .address {
+//                     font-size: 26px !important;
+//                }
+
+//                .date {
+//                     font-size: 20px !important;
+//                }
+//           }
+//      }
+// }
+
+// @media (min-width: 500px) and (max-width: 1000px) {
+//      .image-journals {
+//           .image-journals-content {
+//                .address {
+//                     font-size: 20px !important;
+//                }
+
+//                .date {
+//                     font-size: 17px !important;
+//                }
+//           }
+//      }
+
+
+// }
+
+// @media (max-width: 500px) {
+//      .image-journals {
+//           .image-journals-content {
+//                .address {
+//                     font-size: 18px !important;
+//                }
+
+//                .date {
+//                     font-size: 15px !important;
+//                }
+
+//                a {
+//                     font-size: 13px;
+//                }
+//           }
+//      }
+// }
+
+// @media (max-width: 1140px) {
+//      #mediu-center {
+//           .container-fluid {
+//                padding-inline-start: 15px !important;
+//           }
+
+//           .title {
+//                font-size: 60px;
+
+//                &::before {
+//                     font-size: 80px;
+//                }
+//           }
+
+//           .col-md-9 {
+//                width: 100%;
+//           }
+
+//           .mySwiperMEDIU {
+//                .swiper-slide {
+//                     width: auto;
+
+//                     .desc {
+//                          font-size: 16px;
+//                          margin-top: 10px;
+//                          line-height: 20px;
+//                     }
+//                }
+//           }
+
+//           .btn-more {
+//                display: block;
+//                margin: 100px auto 0;
+//           }
+
+//           .btns {
+//                // position: static;
+//                // margin-block: 10px 20px;
+//                // justify-content: center !important;
+//                position: absolute;
+//                top: 40%;
+//                right: 0;
+//                left: 0;
+//                transform: translateY(-50%);
+//                width: 100%;
+//                display: flex !important;
+//                justify-content: space-between !important;
+//                padding: 0 30px;
+
+//                .swiper-button {
+//                     width: 30px;
+//                     height: 30px;
+//                     font-size: 14px;
+//                     box-shadow: 0px 0px 10px #ccc;
+//                }
+//           }
+
+//           .conta-tab-3 {
+//                height: 550px;
+//                display: block !important;
+//                padding-inline: 30px;
+
+//                .mySwiperMEDIU-2 {
+//                     width: 100%;
+//                     height: 89%;
+//                }
+
+//                .mySwiperMEDIU.tab-3 {
+//                     margin-block-start: 20px;
+
+//                     .swiper-wrapper {
+//                          display: flex;
+//                          flex-direction: row;
+//                          justify-content: center;
+//                          width: 25%;
+//                          margin-bottom: 15px;
+//                     }
+//                }
+//           }
+//      }
+// }
+
+// @media (max-width: 1020px) {
+//      .image-tab1-4 {
+//           display: none !important;
+//      }
+
+//      .image-tab2-4 {
+//           display: flex !important;
+//      }
+// }
+
+// @media (max-width: 992px) {
+//      #mediu-center {
+//           .title {
+//                font-size: 40px;
+//                margin: 20px auto;
+
+//                &::before {
+//                     font-size: 70px;
+//                }
+//           }
+
+
+//      }
+
+//      .tab-mediu-content.News {
+//           text-align: center;
+
+//           img {
+//                max-height: 300px !important;
+//           }
+//      }
+// }
+
+// @media (max-width: 780px) {
+//      #mediu-center {
+//           .title {
+//                font-size: 40px;
+//                margin: 15px auto;
+
+//                &::before {
+//                     content: none !important;
+//                }
+//           }
+
+//           .image {
+//                .date {
+//                     font-size: 27px;
+//                }
+
+//                .day {
+//                     font-size: 16px;
+//                }
+
+//                .year {
+//                     font-size: 16px;
+//                }
+//           }
+//      }
+// }
+
+// @media (min-width: 1278px) and (max-width: 1490px) {
+//      .discussions-content {
+//           height: 394px !important;
+
+//           .discussions-header {
+//                padding-top: 50px !important;
+
+//                .num {
+//                     font-size: 33px !important;
+//                }
+
+//                h5 {
+//                     font-size: 20px !important;
+//                }
+
+//                .des {
+//                     font-size: 14px !important;
+//                }
+//           }
+//      }
+
+// }
+
+// @media (min-width: 1141px) and (max-width: 1278px) {
+//      .discussions-content {
+//           height: 396px !important;
+
+//           .discussions-header {
+//                padding-top: 25px !important;
+
+//                .num {
+//                     font-size: 30px !important;
+//                }
+
+//                h5 {
+//                     font-size: 18px !important;
+//                }
+
+//                .des {
+//                     font-size: 13px !important;
+//                }
+//           }
+//      }
+// }
+
+// @media (min-width: 500px) and (max-width: 1140px) {
+//      .discussions-content {
+//           height: 490px !important;
+
+//           .discussions-header {
+//                padding-top: 60px !important;
+
+//                .num {
+//                     font-size: 32px !important;
+//                }
+
+//                h5 {
+//                     font-size: 20px !important;
+//                }
+
+//                .des {
+//                     font-size: 15px !important;
+//                }
+//           }
+//      }
+// }
+
+// @media (max-width: 500px) {
+//      .discussions-content {
+//           height: 490px !important;
+
+//           .discussions-header {
+//                padding-top: 60px !important;
+
+//                .num {
+//                     font-size: 29px !important;
+//                }
+
+//                h5 {
+//                     font-size: 17px !important;
+//                }
+
+//                .des {
+//                     font-size: 12px !important;
+//                }
+//           }
+
+//           .discussions-footer {
+//                p {
+//                     font-size: 13px !important;
+//                }
+//           }
+//      }
+// }
 
 
 #mediu-center .image-tab1-4 {
