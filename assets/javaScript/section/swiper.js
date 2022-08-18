@@ -155,7 +155,6 @@ export let mySwiperHome3 = new Swiper(".mySwiperHome3", {
                spaceBetween: 10,
           },
 
-
      },
 });
 
@@ -163,7 +162,6 @@ export let mySwiperHome3 = new Swiper(".mySwiperHome3", {
 
 // Swiper In Apply
 export let swiperApplay = new Swiper(".mySwiperApplay", {
-     spaceBetween: 30,
      pagination: {
           el: ".swiper-pagination",
           clickable: true,
@@ -171,6 +169,11 @@ export let swiperApplay = new Swiper(".mySwiperApplay", {
      autoplay: {
           delay: 7000,
           disableOnInteraction: false,
+     },
+     breakpoints: {
+          768: {
+               spaceBetween: 30,
+          },
      },
 });
 
