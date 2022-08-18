@@ -800,7 +800,7 @@ $sliderHeight_xxl: 550px;
 
                     .swiper-slide {
                          width: 25%;
-                         height: 87.5px;
+                         height: 113.5px;
                          margin: 0 auto;
                          background-position: top center;
                          background-size: cover;
@@ -811,7 +811,7 @@ $sliderHeight_xxl: 550px;
                          }
 
                          @include mq('xxl') {
-                              height: 113.5px;
+                              height: 126.5px;
                          }
 
                     }
