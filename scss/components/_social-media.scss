@@ -1,5 +1,6 @@
 .social-media {
      display: flex;
+     bottom: 150px;
 
      @include mq('lg') {
           padding-block-end: 10px;

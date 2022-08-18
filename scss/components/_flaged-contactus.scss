@@ -1,12 +1,12 @@
 .contact {
     position: fixed;
-    bottom: 200px;
+    bottom: 70px;
     #{$right}: 0;
     #{$left}: auto;
     z-index: 33333333;
     text-decoration: none;
 
-    @include mq('md') {
+    @include mq('lg') {
         bottom: 250px;
     }
 
