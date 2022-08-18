@@ -8,14 +8,39 @@
 
   .section-title {
     @include waterMark;
+    margin-bottom: 35px;
+    font-size: 40px;
+
+    @include mq('sm') {
+      font-size: 50px;
+    }
+
+    @include mq('lg') {
+      font-size: 70px;
+    }
 
     @include mq('xxl') {
-      font-size: 97px;
+      font-size: 90px;
     }
 
     &::before {
       @include wateMarkBefore;
-      content: 'Academics'
+      content: ""attr(data-title)"";
+      font-size: 1.4em;
+      display: none;
+
+      @include mq('sm') {
+        display: block;
+      }
+
+      @include mq('lg') {
+        font-size: 1.6em;
+      }
+
+      @include mq('xl') {
+        font-size: 2em;
+      }
+
     }
   }
 

@@ -155,6 +155,7 @@
         opacity: 0;
         transition: 1s;
 
+
         a {
           text-decoration: none;
           color: $font-text;
@@ -198,7 +199,7 @@
   }
 }
 
-@media (min-width: 770px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .apply {
     display: none;
   }
@@ -232,20 +233,17 @@
       padding: 20px;
       width: fit-content;
       transition: 0.5s;
+      box-shadow: $box-shadow;
+      border-radius: 20px;
+      margin: 20px 0;
 
-      &:hover {
-        box-shadow: $box-shadow;
-        transform: scale(1.1);
-
-        .icon span {
-          opacity: 0;
-        }
-
-        .apply-now-button {
-          opacity: 1;
-        }
+      .icon span {
+        opacity: 0;
       }
 
+      .apply-now-button {
+        opacity: 1;
+      }
       .applyNow {
         text-align: center;
 
@@ -255,7 +253,7 @@
           margin-inline-end: 50px;
           margin-inline-end: 50px;
           position: relative;
-          opacity: 0;
+          opacity: 1;
           transition: 1s;
 
           a {
@@ -330,7 +328,7 @@
 }
 
 
-@media (max-width: 770px) {
+@media (max-width: 768px) {
   .apply {
     display: none;
   }
@@ -367,14 +365,18 @@
       padding: 20px;
       justify-content: center;
       transition: 0.5s;
+      box-shadow: $box-shadow;
+      width: 70%;
+      margin: 20px auto;
+      border-radius: 20px;
+
+      .icon span {
+        opacity: 0;
+      }
 
       &:hover {
-        box-shadow: $box-shadow;
-        transform: scale(1.1);
 
-        .icon span {
-          opacity: 0;
-        }
+
 
         .apply-now-button {
           opacity: 1;
@@ -390,7 +392,7 @@
           margin-inline-end: 50px;
           margin-inline-end: 50px;
           position: relative;
-          opacity: 0;
+          opacity: 1;
           transition: 1s;
 
           a {

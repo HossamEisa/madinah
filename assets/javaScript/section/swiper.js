@@ -1,7 +1,7 @@
 // Swiper Js
 
 export let swiperHome = new Swiper(".mySwiperHome", {
-
+     speed: 1200,
      navigation: {
           nextEl: "#home .swiper-button-next",
           prevEl: "#home .swiper-button-prev",
@@ -48,6 +48,8 @@ export let swiperMediuTab3 = new Swiper(".mySwiperMEDIU.tab-3", {
      slidesPerView: 4,
      freeMode: true,
      watchSlidesProgress: true,
+     slidesPerView: 'auto',
+
 });
 export let swiperMediuTab32 = new Swiper(".mySwiperMEDIU-2.tab-3", {
      spaceBetween: 0,

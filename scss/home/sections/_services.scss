@@ -4,6 +4,44 @@
   padding: 50px 0;
   @include ScrollBar;
 
+  .section-title {
+    @include waterMark;
+    margin-bottom: 35px;
+    font-size: 40px;
+
+    @include mq('sm') {
+      font-size: 50px;
+    }
+
+    @include mq('lg') {
+      font-size: 70px;
+    }
+
+    @include mq('xxl') {
+      font-size: 90px;
+    }
+
+    &::before {
+      @include wateMarkBefore;
+      content: ""attr(data-title)"";
+      font-size: 1.4em;
+      display: none;
+
+      @include mq('sm') {
+        display: block;
+      }
+
+      @include mq('lg') {
+        font-size: 1.6em;
+      }
+
+      @include mq('xl') {
+        font-size: 2em;
+      }
+
+    }
+  }
+
   @include mq('xxl') {
     padding: 50px 0 80px;
   }
@@ -183,6 +221,7 @@
                 margin-bottom: 20px;
                 margin-#{$right}: 0;
                 font-weight: bold;
+
                 &::after {
                   @at-root {
                     [dir="rtl"] & {
@@ -190,7 +229,7 @@
                     }
                   }
                 }
-    
+
 
 
                 &::before {
@@ -459,6 +498,7 @@
         @include spanCounterAndLine;
         margin-bottom: 10px;
         margin-#{$right}: 0;
+
         &::after {
           @at-root {
             [dir="rtl"] & {
@@ -490,12 +530,7 @@
 
 @media (max-width: 1649px) {
   #services {
-    h2 {
 
-      &::before {
-        font-size: 150px;
-      }
-    }
 
     .services-list {
       li {
