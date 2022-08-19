@@ -23,9 +23,11 @@ $sliderHeight_xxl: 550px;
           @include mq('lg') {
                font-size: 70px;
           }
+
           @include mq('xxl') {
                font-size: 90px;
           }
+
           &::before {
                @include wateMarkBefore;
                content: ""attr(data-title)"";
