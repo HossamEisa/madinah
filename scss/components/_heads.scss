@@ -1,0 +1,36 @@
+.content-title {
+    font-size: calcRem(36);
+    font-weight: 500;
+    margin-bottom: calcRem(60);
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        bottom: -10px;
+        #{$left}: 0;
+        width: calcRem(60);
+        background-color: $font-secondary;
+        height: 3px;
+    }
+
+    .title {
+        font-size: calcRem(42);
+        font-family: $font-m;
+        margin: 0;
+        line-height: calcRem(40);
+    }
+
+    .subtitle {
+        color: #AAAAAA;
+        font-size: calcRem(18);
+        font-family: $font-m;
+        line-height: calcRem(36);
+    }
+
+    &.no-line {
+        &::after {
+            display: none;
+        }
+    }
+}

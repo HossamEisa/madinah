@@ -25,9 +25,10 @@
 // @ Layout
 
 @import './layout/header';
-@import './layout/layout';
+@import './layout/breadcrumb';
+@import './layout/grid';
 @import './layout/footer';
 
 
-// Home
-@import 'home/sections/all';
+// Home 
+@import 'pages/home/all';
