@@ -440,6 +440,7 @@ $sliderHeight_xxl: 550px;
                     font-size: 17px;
                     font-weight: 400;
                     margin-bottom: 15px;
+                    @include ellipse-rows(3);
                }
 
           }

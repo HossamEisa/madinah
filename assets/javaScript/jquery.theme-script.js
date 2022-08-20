@@ -19,14 +19,12 @@ jQuery(document).ready(function () {
 		});
 	})(jQuery);
 
-
+	if (jQuery('#navigation').length) {
+		jQuery(document).ready(cmsmasters_mov_bar_run);
+		jQuery(window).on('resize', cmsmasters_mov_bar_run);
+	}
 	/* Cmsmasters Moving bar */
-	jQuery(document).ready(cmsmasters_mov_bar_run);
-	jQuery(window).on('resize', cmsmasters_mov_bar_run);
-
-
 	function cmsmasters_mov_bar_run() {
-
 		if (jQuery('#navigation > .current-menu-ancestor').length > 0 && jQuery('#navigation > .current-menu-item').length > 0) {
 			cmsmasters_mov_bar('#navigation', '.current-menu-item');
 		} else if (jQuery('#navigation > .current-menu-ancestor').length > 0) {
@@ -167,26 +165,28 @@ jQuery(document).ready(function () {
 		var section = document.querySelector('#services');
 		var hasEntered = false;
 
-		window.addEventListener('scroll', (e) => {
-			var shouldAnimate = (window.scrollY + window.innerHeight) >= section.offsetTop;
+		if (section !== null) {
+			window.addEventListener('scroll', (e) => {
+				var shouldAnimate = (window.scrollY + window.innerHeight) >= section.offsetTop;
 
-			if (shouldAnimate && !hasEntered) {
-				hasEntered = true;
+				if (shouldAnimate && !hasEntered) {
+					hasEntered = true;
 
-				$('.anim-value').each(function () {
-					$(this).prop('Counter', 0).animate({
-						Counter: $(this).text()
-					}, {
-						duration: 6000,
-						easing: 'swing',
-						step: function (now) {
-							$(this).text(Math.ceil(now));
-						}
+					$('.anim-value').each(function () {
+						$(this).prop('Counter', 0).animate({
+							Counter: $(this).text()
+						}, {
+							duration: 6000,
+							easing: 'swing',
+							step: function (now) {
+								$(this).text(Math.ceil(now));
+							}
+						});
 					});
-				});
 
-			}
-		});
+				}
+			});
+		}
 	})(jQuery);
 
 
@@ -218,22 +218,24 @@ function cmsmasters_media_width() {
 // back to top
 ////////////////////////////////////////////
 const scrollBtnX = document.querySelector(".back-to-top");
+console.log(scrollBtnX);
+if (scrollBtnX != null) {
+	const btnVisibility = () => {
+		if (window.scrollY > 400) {
+			scrollBtnX.style.visibility = "visible";
+		} else {
+			scrollBtnX.style.visibility = "hidden";
+		}
+	};
 
-const btnVisibility = () => {
-    if (window.scrollY > 400) {
-        scrollBtnX.style.visibility = "visible";
-    } else {
-        scrollBtnX.style.visibility = "hidden";
-    }
-};
+	document.addEventListener("scroll", () => {
+		btnVisibility();
+	});
 
-document.addEventListener("scroll", () => {
-    btnVisibility();
-});
-
-scrollBtnX.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});
+	scrollBtnX.addEventListener("click", () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth"
+		});
+	});
+}

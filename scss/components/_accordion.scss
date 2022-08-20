@@ -1,0 +1,54 @@
+.accordion {
+    .accordion-item {
+        margin-bottom: calcRem(8);
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.12);
+        border: none;
+        border-radius: $border-radius;
+        @include containerCounter;
+
+        .accordion-button {
+            border-radius: 5px;
+            font-size: calcRem(24);
+            font-family: $font-m;
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            &:not(.collapsed) {
+                color: inherit;
+                background-color: transparent;
+                box-shadow: none;
+            }
+        }
+
+        .accordion-body {
+            padding: 0 calcRem(90) calcRem(40);
+        }
+
+    }
+
+    .num span {
+        @include spanCounterAndLine;
+
+        &::after {
+            @at-root {
+                [dir="rtl"] & {
+                    transform: rotate(40deg);
+                }
+            }
+        }
+
+        &::after {
+            @include line;
+        }
+
+        &::before {
+            @include counter;
+            font-size: calcRem(14);
+            line-height: 2;
+            font-family: $font-m;
+
+        }
+    }
+}
