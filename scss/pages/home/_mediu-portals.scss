@@ -1,0 +1,65 @@
+.mediu-portals {
+    .section {
+        padding: calcRem(27) calcRem(27) calcRem(15);
+    }
+
+    .swiper-slide {
+        .row {
+            padding-bottom: calcRem(60);
+
+            >div {
+                &:nth-child(odd) {
+                    border-#{$right}: 1px solid rgba(220, 220, 220, 0.25);
+                }
+
+                &:nth-child(1),
+                &:nth-child(2) {
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid rgba(220, 220, 220, 0.25);
+                }
+
+                &:nth-child(3),
+                &:nth-child(4) {
+                    padding-top: 20px;
+                }
+            }
+        }
+
+        a {
+            color: $font-text;
+            text-align: center;
+            display: block;
+
+            p {
+                margin: 0;
+            }
+
+            &:hover {
+                color: $font-text;
+                position: relative;
+                text-decoration: none;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: calcRem(94);
+                    height: 6px;
+                    border-radius: 20px;
+                    background-color: $font-primary;
+                    left: 50%;
+                    bottom: -10px;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+        img {
+            width: 50px;
+            @include mq('md') {
+                width: 60px;
+            }
+            @include mq('xxl') {
+                width: 90px;
+            }
+        }
+    }
+}

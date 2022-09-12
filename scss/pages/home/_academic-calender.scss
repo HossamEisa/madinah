@@ -1,0 +1,49 @@
+.academic-calender {
+    .section {
+        padding: 21px;
+    }
+
+    .title {
+        font-size: calcRem(24);
+        color: #383130;
+        font-family: $font-m;
+    }
+
+    .desc {
+        font-size: calcRem(18);
+        line-height: 24px;
+        font-family: $font-m;
+        margin-bottom: 10px;
+        margin-top: 6px;
+    }
+
+    .link {
+        color: #001351;
+        font-size: calcRem(16);
+        font-family: $font-b;
+    }
+
+
+
+    .date-time {
+        color: $font-black-50;
+        font-size: calcRem(18);
+        font-family: $font-m;
+        margin: 0;
+
+        .day {
+            font-size: calcRem(20);
+            border-bottom: 1px solid;
+
+            .date-title {
+                font-size: calcRem(36);
+                font-family: $font-m;
+                line-height: 0;
+                color: $font-text;
+            }
+
+
+        }
+
+    }
+}

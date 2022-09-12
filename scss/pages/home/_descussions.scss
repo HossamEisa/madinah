@@ -1,0 +1,74 @@
+.descussions {
+    .section {
+        padding: 12px;
+        height: calc(100% - 3.35rem);
+        border-top: none;
+
+    }
+
+    .descussions-article {
+        padding: calcRem(60) calcRem(20);
+
+        .article-info {
+            .article-title {
+                font-size: calcRem(36);
+                font-family: $font-m;
+                line-height: 0;
+            }
+
+            .article-date {
+                color: $font-black-50;
+                font-size: calcRem(18);
+                font-family: $font-m;
+
+                .day {
+                    font-size: calcRem(20);
+                    border-bottom: 1px solid;
+                }
+
+            }
+        }
+
+        .title {
+            color: $font-secondary;
+            font-size: calcRem(24);
+            font-family: $font-m;
+        }
+
+        .desc {
+            font-size: calcRem(18);
+            font-family: $font-m;
+            line-height: 36px;
+            height: calcRem(184);
+            overflow: hidden;
+        }
+
+        .time-range {
+            p {
+                margin-bottom: 0;
+            }
+
+            .date-title {
+                font-size: calcRem(14);
+                font-family: $font-m;
+                line-height: 0;
+            }
+
+            .date-time {
+                font-size: calcRem(18);
+                font-family: $font-m;
+            }
+        }
+
+        .mail-circle {
+            width: calcRem(54);
+            height: calcRem(54);
+            border-radius: 50%;
+            background-color: $bg-section;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $font-text;
+        }
+    }
+}

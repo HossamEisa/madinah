@@ -9,3 +9,15 @@
         font-size: calcRem(16);
     }
 }
+
+.select-single {
+    border-radius: $border-radius;
+    filter: drop-shadow(0 15px 50px rgba(0, 0, 0, 0.16));
+
+    .selectize-input {
+        min-height: calcRem(60);
+        font-size: calcRem(16);
+        display: flex;
+        align-items: center;
+    }
+}

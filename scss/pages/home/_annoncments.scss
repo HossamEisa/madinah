@@ -1,0 +1,42 @@
+.annoncments {
+    @include mq('xl') {
+        margin-top: calcRem(40);
+    }
+    .section {
+        padding: 15px 0;
+        padding-inline-start: 17px;
+        padding-inline-end: 25px;
+    }
+
+    .title {
+        font-size: calcRem(24);
+        color: #383130;
+        font-family: $font-m;
+    }
+
+    .desc {
+        font-size: calcRem(18);
+        font-family: $font-b;
+        line-height: calcRem(24);
+    }
+
+    .image {
+        position: relative;
+
+        img {
+            height: calcRem(176);
+            object-fit: cover;
+        }
+
+        .overlay-date {
+            position: absolute;
+            background-color: $font-primary;
+            bottom: 0;
+            #{$left}: 0;
+            padding: 8px 35px;
+            color: $dark-blue;
+            font-family: $font-m;
+            font-size: calcRem(18);
+        }
+    }
+}

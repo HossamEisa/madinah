@@ -15,10 +15,12 @@ $homeHeight-xxl: 840px;
           position: relative;
           height: 100%;
 
+
           .swiper-slide {
                background-position: top $left;
                height: 100%;
                background-size: cover;
+               padding-bottom: calcRem(363);
 
                @at-root {
                     [dir="rtl"] & {
@@ -33,16 +35,14 @@ $homeHeight-xxl: 840px;
 
           .content-swiper {
                z-index: 22;
-               display: flex;
-               flex-direction: column;
-               justify-content: center;
-               width: 90%;
                color: $font-white;
                padding-inline-start: 30px;
+               padding-top: calcRem(140);
 
-               // @include mq('md') {
-               //      width: 80%;
-               // }
+               @include mq('sm') {
+                    padding-top: calcRem(180);
+                    width: 90%;
+               }
 
                @include mq('lg') {
                     width: 65%;
@@ -51,16 +51,16 @@ $homeHeight-xxl: 840px;
                @include mq('xxl') {
                     padding-inline-start: 0;
                     width: 53.9%;
-                    padding-top: 20px;
                }
 
                .titel-swiper {
-                    font-size: 48px;
+                    font-size: calcRem(32);
                     font-weight: 600;
                     line-height: 70px;
 
                     @include mq('xxl') {
                          line-height: 37px;
+                         font-size: calcRem(40);
                     }
                }
 
@@ -114,9 +114,13 @@ $homeHeight-xxl: 840px;
                     }
 
                     .desc-swiper {
-                         font-size: 32px;
+                         font-size: calcRem(24);
                          line-height: 42px;
                          margin-bottom: 10px;
+
+                         @include mq('xxl') {
+                              font-size: calcRem(28);
+                         }
                     }
 
                     .desc {
@@ -178,6 +182,7 @@ $homeHeight-xxl: 840px;
                          p {
                               font-size: 24px;
                               font-weight: 600;
+                              margin: 0;
                          }
                     }
                }
@@ -208,13 +213,8 @@ $homeHeight-xxl: 840px;
 
 
                &.next {
-                    bottom: 13%;
-                    #{$right}: 35%;
-
-                    @include mq('xxl') {
-                         bottom: 17.7%;
-                         #{$right}: 28.7%;
-                    }
+                    bottom: 17%;
+                    #{$right}: 10%;
                }
 
                &.swiper-button-disabled {
@@ -223,16 +223,9 @@ $homeHeight-xxl: 840px;
                }
 
                &.prev {
-                    bottom: 13%;
-                    #{$right}: 40%;
-
-                    @include mq('xxl') {
-                         bottom: 17.7%;
-                         #{$right}: 32.2%;
-                    }
+                    bottom: 17%;
+                    #{$right}: 15%;
                }
-
-
 
           }
 
@@ -284,7 +277,7 @@ $homeHeight-xxl: 840px;
           .mySwiperHome {
                .content-swiper {
                     .titel-swiper {
-                         font-size: 35px;
+                         font-size: 26px;
                          line-height: 45px;
                     }
 
@@ -298,7 +291,7 @@ $homeHeight-xxl: 840px;
                          }
 
                          .number {
-                              font-size: 30px;
+                              font-size: 20px;
                          }
 
                          .content {
@@ -308,8 +301,8 @@ $homeHeight-xxl: 840px;
                               }
 
                               p {
-                                   font-size: 19px;
-
+                                   font-size: 16px;
+                                   line-height: 1.6;
                               }
                          }
                     }
@@ -354,30 +347,13 @@ $homeHeight-xxl: 840px;
                width: 100% !important;
           }
 
-          .slider-wapper-3-large {
-               display: none !important;
-          }
-
-          .slide-wapper-3-small {
-               display: flex !important;
-
-               .number {
-                    line-height: 35px !important;
-               }
-
-               .content {
-                    .p {
-                         font-size: 15px;
-                    }
-               }
-          }
-
+       
           .mySwiperHome {
                .content-swiper {
                     margin-inline: auto;
 
                     &.two .desc-swiper {
-                         font-size: 24px;
+                         font-size: 16px;
                          line-height: 36px;
                     }
 
@@ -406,12 +382,12 @@ $homeHeight-xxl: 840px;
 
                     &.next {
                          bottom: 5%;
-                         #{$right}: 19%;
+                         #{$right}: 10%;
                     }
 
                     &.prev {
                          bottom: 5%;
-                         #{$right}: 30%;
+                         #{$right}: 20%;
                     }
 
                }
@@ -420,4 +396,78 @@ $homeHeight-xxl: 840px;
      }
 
 
+}
+
+.rectangle-area {
+     background: url('../../../assets/img/Rectangle.png') no-repeat center/100% 100%;
+     position: absolute;
+     #{$left}: 0;
+     bottom: 0;
+     z-index: 3;
+     padding-inline-start: 2%;
+     padding-inline-end: calcRem(20);
+     padding-bottom: calcRem(20);
+     padding-top: calcRem(10);
+     width: 50%;
+
+     // display: none;
+     @include mq('sm') {
+          padding-top: calcRem(20);
+     }
+
+     @include mq('md') {
+          width: 50%;
+          display: block;
+     }
+
+     @include mq('lg') {
+          padding-bottom: calcRem(120);
+          padding-inline-end: calcRem(100);
+          padding-top: calcRem(20);
+          padding-inline-start: 7%;
+     }
+
+     @include mq('xl') {
+          // height: calcRem(363);
+          padding-bottom: calcRem(140);
+          padding-inline-end: calcRem(140);
+          padding-top: calcRem(30);
+          padding-inline-start: 7%;
+     }
+
+     .apply {
+          color: $font-primary;
+          font-size: calcRem(16);
+          font-family: $font-m;
+
+          @include mq('sm') {
+               font-size: calcRem(22);
+          }
+
+          @include mq('xxl') {
+               font-size: calcRem(32);
+          }
+     }
+
+     .title {
+          font-size: calcRem(16);
+          color: $font-white;
+
+          @include mq('sm') {
+               font-size: calcRem(22);
+          }
+
+          @include mq('xxl') {
+               font-size: calcRem(32);
+          }
+     }
+
+     .more {
+          color: $font-secondary;
+          font-size: calcRem(14);
+
+          @include mq('sm') {
+               font-size: calcRem(16);
+          }
+     }
 }

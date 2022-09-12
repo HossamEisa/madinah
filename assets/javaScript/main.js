@@ -1,78 +1,62 @@
+// Swiper Js
 
-// Exports Swiper js
-import {
-     mySwiperHome3,
-     swiperAcademics,
-     swiperApplay,
-     swiperDiscussions,
-     swiperHome,
-     swiperJournals,
-     // swiperMEDIU,
-     swiperMEDIUNews,
-     swiperMEDIUEvents,
-     swiperMediuTab3,
-     swiperMediuTab32,
-     swiperMediuTab4,
-     swiperServices
-} from './section/swiper.js';
+let swiperHome = new Swiper(".mySwiperHome", {
+     speed: 1200,
+     navigation: {
+          nextEl: "#home .swiper-button-next",
+          prevEl: "#home .swiper-button-prev",
+     },
 
-// const swiper = require( './section/swiper.js' );
-swiperHome
-mySwiperHome3
-swiperApplay
-swiperAcademics
-// swiperMEDIU
-swiperMEDIUNews
-swiperMEDIUEvents,
-swiperMediuTab3
-swiperMediuTab32
-swiperDiscussions
-swiperJournals
-swiperServices
-swiperMediuTab4
-
-// Exports Tabs
-import {
-     tabsMediuLarge,
-     tabsMediuSmall,
-     tabsServicesLarge,
-     tabsServicesArray,
-     tabsSmallServicesArray
-} from './section/tabs.js';
-
-tabsMediuLarge
-tabsMediuSmall
-tabsServicesLarge
-// tabsServicesSmall
-
-
-swiperServices.on('slideChange', function () {
-     const index = this.realIndex;
-
-     tabsSmallServicesArray.forEach((el) => {
-          el.classList.remove("activ");
-     })
-     let tabsSmall = document.querySelectorAll('[data-indexslide-small]')
-     let tabsArraySmall = Array.from(tabsSmall)
-     tabsArraySmall.filter((e) => {
-          let number = Number(e.getAttribute('data-indexslide-small'))
-          if (number == index) {
-               e.classList.add('activ')
-          }
-     })
-     tabsServicesArray.forEach((el) => {
-          el.classList.remove("active");
-     })
-     let tabs = document.querySelectorAll('[data-indexslide]')
-     let tabsArray = Array.from(tabs)
-     tabsArray.filter((e) => {
-          let number = Number(e.getAttribute('data-indexslide'))
-          if (number == index) {
-               e.classList.add('active')
-          }
-     })
 });
 
+
+let newsCarousel = new Swiper(".newsCarousel", {
+     spaceBetween: 10,
+     slidesPerView: 1,
+     speed: 1200,
+     pagination: {
+          el: ".newsCarousel .swiper-pagination",
+          clickable: true,
+     },
+});
+
+let descussionsSwiper = new Swiper(".descussions-swiper", {
+     spaceBetween: 10,
+     slidesPerView: 1,
+     speed: 1200,
+     pagination: {
+          el: ".descussions-swiper .swiper-pagination",
+          clickable: true,
+     },
+});
+
+let mediuPortalsSwiper = new Swiper(".mediu-portals-swiper", {
+     spaceBetween: 10,
+     slidesPerView: 1,
+     speed: 1200,
+     pagination: {
+          el: ".mediu-portals-swiper .swiper-pagination",
+          clickable: true,
+     },
+});
+let academicsSwiper = new Swiper(".academics-swiper", {
+     spaceBetween: 10,
+     slidesPerView: 1,
+     speed: 1200,
+     pagination: {
+          el: ".academics-swiper .swiper-pagination",
+          clickable: true,
+     },
+});
+let subdomainSwiper = new Swiper(".subdomain-swiper", {
+     spaceBetween: 10,
+     slidesPerView: 1,
+     speed: 1200,
+     pagination: {
+          el: ".subdomain-swiper .swiper-pagination",
+          clickable: true,
+     },
+});
 
 
 
@@ -83,9 +67,6 @@ const closeSearch = document.getElementById('close-search');
 
 if (searchIcon) {
      searchIcon.addEventListener('click', (e) => {
-          console.log(e.target);
-          console.log(this);
-          console.log(searchIcon);
           searchBox.classList.toggle('fade');
      })
 }
@@ -132,6 +113,6 @@ if (closeSearch) {
 jQuery.noConflict();
 (function ($) {
      $(function () {
-        
+
      });
 })(jQuery);

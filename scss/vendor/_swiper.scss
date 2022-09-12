@@ -1,3 +1,9 @@
-
 // IMPORT SWIPER CSS
-@import './swiper-bundle.min.css';
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+}
+.swiper-pagination-bullet-active {
+    background-color: $font-primary;
+}

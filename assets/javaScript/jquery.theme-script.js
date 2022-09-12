@@ -187,17 +187,9 @@ jQuery(document).ready(function () {
 				}
 			});
 		}
+	
 	})(jQuery);
 
-
-	if (jQuery('.counter-animation').length) {
-
-		//If you want to display decimal numbers, then instead of rounding the value with Math.ceil you can round up to 2 decimals for instance with value.toFixed(2):
-
-		// step: function () {
-		//   jQuerythis.text(this.Counter.toFixed(2));
-		// }
-	}
 
 
 
@@ -218,7 +210,6 @@ function cmsmasters_media_width() {
 // back to top
 ////////////////////////////////////////////
 const scrollBtnX = document.querySelector(".back-to-top");
-console.log(scrollBtnX);
 if (scrollBtnX != null) {
 	const btnVisibility = () => {
 		if (window.scrollY > 400) {

@@ -1,0 +1,29 @@
+.subdomain-box {
+    @include mq('xl') {
+        margin-top: calcRem(40);
+    }
+
+    .section {
+        padding: calcRem(15) calcRem(50);
+    }
+
+    .swiper-slide {
+        padding: 10px;
+        padding-bottom: calcRem(40);
+    }
+
+    .subdomain {
+        border: 1px solid #F3EFE5;
+        padding: calcRem(15) calcRem(50);
+
+        .title {
+            color: $font-secondary;
+            font-size: calcRem(14);
+        }
+
+        .desc {
+            font-size: calcRem(20);
+            line-height: calcRem(30);
+        }
+    }
+}

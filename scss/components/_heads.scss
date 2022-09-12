@@ -34,3 +34,23 @@
         }
     }
 }
+
+.title-with-bottom-border {
+    color: #001351;
+    font-size: calcRem(24);
+    font-family: $font-m;
+    text-align: center;
+    position: relative;
+    margin-bottom: 3.5rem;
+    &::after {
+        position: absolute;
+        content: "";
+        width: calcRem(94);
+        height: 6px;
+        border-radius: 20px;
+        background-color: #001351;
+        left: 50%;
+        bottom: -10px;
+        transform: translateX(-50%);
+    }
+}

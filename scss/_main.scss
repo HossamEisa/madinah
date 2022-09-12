@@ -3,15 +3,17 @@
 // @ Helper
 @import './helper/directions';
 
-// @ Vendors
-// Global Imports plugins
-@import "./vendor/all";
+
 
 // @ abstract
 @import './abstract/functions';
 @import './abstract/variables';
 @import './abstract/mixins';
 @import './abstract/placeholder';
+// @ Vendors
+// Global Imports plugins
+@import "./vendor/all";
+
 
 
 // @ Base

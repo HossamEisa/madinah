@@ -1,299 +1,39 @@
-#academics {
-  overflow-x: hidden;
-  padding: 50px 0;
-
-  @include mq('xxl') {
-    padding: 60px 50px;
-  }
-
-  .section-title {
-    @include waterMark;
-    margin-bottom: 35px;
-    font-size: 40px;
-
-    @include mq('sm') {
-      font-size: 50px;
+.academics {
+    .section {
+        padding: calcRem(27) calcRem(15);
     }
 
-    @include mq('lg') {
-      font-size: 70px;
-    }
-
-    @include mq('xxl') {
-      font-size: 90px;
-    }
-
-    &::before {
-      @include wateMarkBefore;
-      content: ""attr(data-title)"";
-      font-size: 1.4em;
-      display: none;
-
-      @include mq('sm') {
-        display: block;
-      }
-
-      @include mq('lg') {
-        font-size: 1.6em;
-      }
-
-      @include mq('xl') {
-        font-size: 2em;
-      }
-
-    }
-  }
-
-  .mySwiperAcademics {
     .swiper-slide {
-      @include containerCounter;
+        padding-inline-start: calcRem(30);
+        padding-inline-end: calcRem(20);
+        padding-bottom: 2rem;
 
-      .academics-card {
-        padding-#{$left}: 75px;
-        padding-top: 50px;
-        transition: 0.5s;
-        background-image: url('../../assets/img/academics/mask48-2.svg');
-        background-repeat: no-repeat;
-        background-position: top $right;
-        height: 350px;
-        position: relative;
-        box-shadow: $box-shadow;
-        padding-bottom: 40px;
+        @include mq('lg') {
+            padding-inline-end: calcRem(60);
+        }
+
+        @include mq('xl') {
+            padding-inline-end: calcRem(30);
+        }
 
         @include mq('xxl') {
-          height: 440px;
+            padding-inline-end: 11%;
         }
 
-        &::before {
-          content: '';
-          background-image: linear-gradient(to $right, #826A51 0%, #ED1A3B 100%);
-          #{$left}: 0px;
-          #{$right}: 0px;
-          bottom: 0px;
-          height: 3px;
-          position: absolute;
-        }
-
-        img {
-          margin-bottom: 40px;
-
-          @include mq('xxl') {
-            width: 80px;
-            height: 80px;
-          }
-        }
-
-        .swiper-title {
-          width: 90%;
-          font-size: 1rem;
-
-          @include mq('xxl') {
-            font-size: 1.25rem;
-          }
-        }
-
-
-
-        .academics-counter {
-          span {
-            @include spanCounterAndLine;
-            position: absolute;
-            #{$left}: 12px;
-
-            &::after {
-              @at-root {
-                [dir="rtl"] & {
-                  transform: rotate(40deg);
-                }
-              }
+        @media (min-width: 1750px) {
+            @include mq('xxl') {
+                padding-inline-end: calcRem(108);
             }
-
-            &::after {
-              @include line;
-            }
-
-            &::before {
-              @include counter;
-            }
-          }
         }
-
-        .academics-card-link {
-          width: 100%;
-          padding-#{$right}: 10px;
-
-          a {
-            text-decoration: none;
-            color: $font-secondary;
-            font-size: 16px;
-            font-weight: 500;
-            opacity: 0;
-            transition: 0.5s;
-          }
-
-          i {
-            color: $font-text;
-            padding-inline-end: 30px;
-          }
-
-        }
-
-        &:hover .academics-card-link {
-          a {
-            opacity: 1;
-          }
-
-          i {
-            color: $font-secondary;
-          }
-        }
-
-        &:hover {
-          background-image: url('../../assets/img/academics/Mask\ Group\ 48.svg');
-        }
-      }
     }
-
-  }
-
-  .btns {
-    position: absolute;
-    #{$right}: 40px;
-    top: -75px;
-    z-index: 333;
-
-    .swiper-button {
-      width: 45px;
-      height: 45px;
-      background-color: $font-white;
-      z-index: 3;
-      border-radius: 100%;
-      @include flexCentar;
-      color: $font-white;
-
-      &.next {
-        background-color: $font-secondary;
-        border-radius: 50%;
-      }
-
-      &.prev {
-        background-color: $font-secondary;
-        border-radius: 50%;
-        margin-#{$right}: 30px;
-      }
-
-      &.swiper-button-disabled {
-        border: 1px solid #999;
-        color: #999;
-        background-color: $font-white;
-      }
-    }
-  }
-
-  .academics-button {
-    @include btnYallow;
-    padding: 5px 22px;
-    margin-top: 50px;
 
     a {
-      text-decoration: none;
-      color: $font-text;
-    }
-  }
-}
-
-@media (min-width: 1480px) and (max-width: 1649px) {
-  #academics {
-    h2 {
-
-      &::before {
-        font-size: 150px;
-      }
-    }
-  }
-}
-
-@media (min-width: 1480px) and (max-width: 1649px) {
-  #academics {
-    h2 {
-
-      &::before {
-        font-size: 140px;
-      }
-    }
-  }
-}
-
-@media (min-width: 1140px) and (max-width: 1279px) {
-  #academics {
-    h2 {
-
-      &::before {
-        font-size: 130px;
-      }
-    }
-  }
-}
-
-@media (max-width: 1140px) {
-  #academics {
-    h2 {
-      font-size: 60px;
-
-      &::before {
-        font-size: 80px;
-      }
+        display: block;
     }
 
-    .academics-button {
-      display: block;
-      margin: 0 auto;
+    .desc {
+        font-size: calcRem(20);
+        color: $font-text;
+        margin: 0;
     }
-
-    .btns {
-      position: static;
-      margin-block: 20px 20px;
-      justify-content: center !important;
-
-      .swiper-button {
-        width: 30px;
-        height: 30px;
-        font-size: 14px;
-      }
-    }
-  }
-}
-
-@media (max-width: 992px) {
-  #academics {
-    h2 {
-      font-size: 40px;
-      margin: 20px auto;
-
-      &::before {
-        font-size: 70px;
-      }
-    }
-
-
-  }
-}
-
-@media (max-width: 780px) {
-
-  #academics {
-    .container-fluid {
-      padding: 0;
-      padding-inline-start: 25px;
-    }
-
-    h2 {
-      font-size: 40px;
-      margin: 15px auto;
-
-      &::before {
-        content: none !important;
-      }
-    }
-  }
 }
