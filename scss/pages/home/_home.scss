@@ -1,5 +1,5 @@
 $homeHeight: 740px;
-$homeHeight-xxl: 840px;
+$homeHeight-xxl: 940px;
 
 #home {
      overflow-x: hidden;
@@ -49,6 +49,7 @@ $homeHeight-xxl: 840px;
                }
 
                @include mq('xxl') {
+                    padding-top: calcRem(220);
                     padding-inline-start: 0;
                     width: 53.9%;
                }
@@ -347,7 +348,7 @@ $homeHeight-xxl: 840px;
                width: 100% !important;
           }
 
-       
+
           .mySwiperHome {
                .content-swiper {
                     margin-inline: auto;
@@ -439,6 +440,7 @@ $homeHeight-xxl: 840px;
           color: $font-primary;
           font-size: calcRem(16);
           font-family: $font-m;
+          text-transform: capitalize;
 
           @include mq('sm') {
                font-size: calcRem(22);
@@ -452,6 +454,7 @@ $homeHeight-xxl: 840px;
      .title {
           font-size: calcRem(16);
           color: $font-white;
+          text-transform: capitalize;
 
           @include mq('sm') {
                font-size: calcRem(22);
@@ -465,9 +468,15 @@ $homeHeight-xxl: 840px;
      .more {
           color: $font-secondary;
           font-size: calcRem(14);
+          font-family: $font-sb;
+          text-transform: capitalize;
 
           @include mq('sm') {
                font-size: calcRem(16);
+          }
+
+          @include mq('xl') {
+               font-size: calcRem(24);
           }
      }
 }

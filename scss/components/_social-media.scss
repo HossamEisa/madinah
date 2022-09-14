@@ -1,13 +1,16 @@
 .social-media {
-     margin-bottom: calcRem(108);
-
+     margin-bottom: calcRem(200);
+     position: fixed;
      display: flex;
-
 
      @include mq('lg') {
           padding-block-end: 10px;
           display: block;
+          #{$right}: 1.3%;
+     }
 
+     @include mq('xl') {
+          #{$right}: 1.5%;
      }
 
      .social-item {
@@ -17,6 +20,7 @@
           margin-bottom: 12px;
           text-decoration: none;
           cursor: pointer;
+          filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 
           @include mq('lg') {
                width: 32px;

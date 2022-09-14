@@ -1,10 +1,14 @@
 :root {
     font-size: 16px;
-
+    background: url("../../assets/img/bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: contain;
     @include mq('xxl') {
         font-size: 20px;
     }
 }
+
+
 
 body {
     font-family: $font-r;

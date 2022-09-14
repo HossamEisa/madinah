@@ -153,6 +153,7 @@
           line-height: 40px;
           font-weight: 500;
           flex-shrink: 0;
+          font-family: $font-m;
 
           @include mq('xl') {
                position: relative;
@@ -366,7 +367,7 @@
                #{$left}: -100%;
                position: absolute;
                height: 100%;
-               transition: .5s ease;
+               transition: .3s ease;
                box-shadow: 1px 1px 15px #ccc;
                text-align: $left;
           }
@@ -459,7 +460,7 @@
                #{$right}: 0;
                top: 0;
                bottom: 0;
-               transition: 0.4s ease;
+               transition: 0.3s ease;
           }
 
           &.cmsmasters_theme_icon_resp_nav_slide_down:before {
@@ -544,29 +545,31 @@
 
 .header div>ul ul,
 .header div>ul div {
-     -webkit-transition: opacity .3s ease-in-out .1s, margin-top .3s ease-in-out .1s;
-     -moz-transition: opacity .3s ease-in-out .1s, margin-top .3s ease-in-out .1s;
-     -ms-transition: opacity .3s ease-in-out .1s, margin-top .3s ease-in-out .1s;
-     -o-transition: opacity .3s ease-in-out .1s, margin-top .3s ease-in-out .1s;
-     transition: opacity .3s ease-in-out .1s, margin-top .3s ease-in-out .1s;
+     transition: opacity .3s ease-in-out .1s, margin-top .3s ease-in-out .1s, visibility .3s ease-in-out .1s;
+
 }
 
 .header div>ul ul ul {
      -webkit-transition: opacity .3s ease-in-out .1s,
      margin-#{$left} .3s ease-in-out .1s,
-     margin-#{$right} .3s ease-in-out .1s;
+     margin-#{$right} .3s ease-in-out .1s,
+     visibility .3s ease-in-out .1s;
      -moz-transition: opacity .3s ease-in-out .1s,
      margin-#{$left} .3s ease-in-out .1s,
-     margin-#{$right} .3s ease-in-out .1s;
+     margin-#{$right} .3s ease-in-out .1s,
+     visibility .3s ease-in-out .1s;
      -ms-transition: opacity .3s ease-in-out .1s,
      margin-#{$left} .3s ease-in-out .1s,
-     margin-#{$right} .3s ease-in-out .1s;
+     margin-#{$right} .3s ease-in-out .1s,
+     visibility .3s ease-in-out .1s;
      -o-transition: opacity .3s ease-in-out .1s,
      margin-#{$left} .3s ease-in-out .1s,
-     margin-#{$right} .3s ease-in-out .1s;
+     margin-#{$right} .3s ease-in-out .1s,
+     visibility .3s ease-in-out .1s;
      transition: opacity .3s ease-in-out .1s,
      margin-#{$left} .3s ease-in-out .1s,
-     margin-#{$right} .3s ease-in-out .1s;
+     margin-#{$right} .3s ease-in-out .1s,
+     visibility .3s ease-in-out .1s;
 }
 
 ///////////////////////////////////
