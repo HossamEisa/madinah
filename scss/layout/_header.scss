@@ -421,6 +421,16 @@
 
           .social-media {
                position: static;
+               .social-item {
+                    width: 32px;
+                    height: 32px;
+                    i {
+                         font-size: 14px;
+                    }
+                    svg {
+                         width: 15px;
+                    }
+               }
           }
      }
 
