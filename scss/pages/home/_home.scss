@@ -456,6 +456,10 @@ $homeHeight-xxl: 940px;
           padding-inline-start: 7%;
      }
 
+     @include mq('xxl') {
+          width: 47.8%;
+     }
+
      .apply {
           color: $font-primary;
           font-size: calcRem(16);

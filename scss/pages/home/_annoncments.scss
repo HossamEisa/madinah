@@ -2,10 +2,12 @@
     @include mq('xl') {
         margin-top: calcRem(40);
     }
+
     a {
         all: unset;
         cursor: pointer;
     }
+
     .section {
         padding: 15px 0 0;
         padding-inline-start: 17px;
@@ -31,6 +33,7 @@
         img {
             height: calcRem(150);
             object-fit: cover;
+            width: 100%;
 
             @include mq('xxl') {
                 height: calcRem(166);
@@ -52,13 +55,13 @@
 
     .swiper-annoncments {
         padding-bottom: 30px;
-        
+
     }
 
     .swiper-horizontal>.swiper-pagination-bullets,
     .swiper-pagination-bullets.swiper-pagination-horizontal,
     .swiper-pagination-custom,
     .swiper-pagination-fraction {
-        bottom:5px;
+        bottom: 5px;
     }
 }
