@@ -1,7 +1,7 @@
 .back-to-top {
     position: fixed;
     bottom: 40px;
-    #{$right}: 25px;
+    #{$right}: 1%;
     z-index: 20;
     background-color: $font-primary;
     border: 2px solid #fff;
@@ -18,6 +18,9 @@
     align-items: center;
     visibility: hidden;
     font-size: 18px;
+    @include mq('xxl') {
+        #{$right}: 2%;
+    }
 
 }
 

@@ -2,7 +2,10 @@
     @include mq('xl') {
         margin-top: calcRem(40);
     }
-
+    a {
+        all: unset;
+        cursor: pointer;
+    }
     .section {
         padding: 15px 0 0;
         padding-inline-start: 17px;
@@ -10,23 +13,29 @@
     }
 
     .title {
-        font-size: calcRem(24);
+        font-size: calcRem(22);
         color: #383130;
         font-family: $font-m;
     }
 
     .desc {
-        font-size: calcRem(17);
+        font-size: calcRem(16);
         font-family: $font-b;
         line-height: calcRem(20);
+        margin-bottom: 12px;
     }
 
     .image {
         position: relative;
 
         img {
-            height: calcRem(176);
+            height: calcRem(150);
             object-fit: cover;
+
+            @include mq('xxl') {
+                height: calcRem(166);
+
+            }
         }
 
         .overlay-date {
@@ -42,13 +51,14 @@
     }
 
     .swiper-annoncments {
-        padding-bottom: 22px;
+        padding-bottom: 30px;
+        
     }
 
     .swiper-horizontal>.swiper-pagination-bullets,
     .swiper-pagination-bullets.swiper-pagination-horizontal,
     .swiper-pagination-custom,
     .swiper-pagination-fraction {
-        bottom: -2px;
+        bottom:5px;
     }
 }

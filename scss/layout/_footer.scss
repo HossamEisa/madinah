@@ -91,7 +91,7 @@ footer {
     .copyright {
       font-size: calcRem(14);
       font-family: $font-m;
-      color: rgba(0, 0, 0, 0.50);
+      color: rgba(0, 0, 0, 0.70);
     }
   }
 }
@@ -205,79 +205,6 @@ footer {
   }
 }
 
-@media (max-width: 650px) {
-  footer {
-    background-color: $bg-footer;
-  }
-
-  .wrapper-one {
-
-    p,
-    span {
-      font-size: 13px;
-    }
-
-    .heading-footer {
-      font-size: 14px;
-    }
-
-    .row {
-      justify-content: center;
-    }
-
-    .col-md-3 {
-      width: 100%;
-    }
-
-    .app-container,
-    .certificaten {
-      width: 85%;
-      margin-#{$left}: auto;
-    }
-
-    .certificaten {
-      margin-bottom: 50px;
-      margin-top: 40px;
-    }
-
-    .app-container {
-      margin-bottom: 40px;
-    }
-
-    .card {
-      width: 85% !important;
-      margin-top: 20px;
-      margin-inline: auto;
-      position: static !important;
-    }
-  }
-
-  .wrapper-two {
-    box-shadow: 0px 6px 17px 0px rgba($color: $bg-footer, $alpha: 0.30) inset;
-    -webkit-box-shadow: 0px 6px 17px 0px rgba($color: $bg-footer, $alpha: 0.30) inset;
-    -moz-box-shadow: 0px 6px 17px 0px rgba($color: $bg-footer, $alpha: 0.30) inset;
-    // transform: translatey(-20px);
-    border-radius: 20px 20px 0 0;
-    background-color: rgb(249, 247, 247) !important;
-
-    .footer-links {
-      width: 85%;
-      margin: 0 auto;
-    }
-
-    .footer-links {
-      a {
-        font-size: 13px;
-        margin-bottom: 7px;
-      }
-    }
-
-    p {
-      width: 85%;
-      margin: 0 auto;
-    }
-  }
-}
 
 #footer .fa-arrow-right-long {
   @at-root {
@@ -317,4 +244,78 @@ footer {
     }
   }
 
+}
+
+@media (max-width: 650px) {
+
+ footer .wrapper-one {
+    padding-bottom: 70px;
+
+    p,
+    span {
+      font-size: 13px;
+      margin-bottom: 0;
+    }
+
+    .heading-footer {
+      font-size: 14px;
+    }
+
+    .row {
+      justify-content: center;
+    }
+
+    .col-md-3 {
+      width: 100%;
+    }
+
+    .app-container,
+    .certificaten {
+      width: 85%;
+      margin-#{$left}: auto;
+    }
+
+    .certificaten {
+      margin-bottom: 50px;
+      margin-top: 40px;
+    }
+
+    .app-container {
+      margin-bottom: 40px;
+    }
+
+    .card {
+      width: 85% !important;
+      margin-top: 20px;
+      margin-inline: auto;
+      position: static !important;
+    }
+  }
+
+  footer .wrapper-two {
+    background-color: rgb(249 247 247 / 80%);
+    backdrop-filter: blur(36px) brightness(1.23);
+    -webkit-backdrop-filter: blur(36px) brightness(1.23);
+    -moz-backdrop-filter: blur(36px) brightness(1.23);
+
+    margin-top: -50px;
+    border-radius: 20px 20px 0 0;
+
+    .footer-links {
+      width: 85%;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      a {
+        font-size: 13px;
+        margin-bottom: 7px;
+      }
+    }
+
+    p {
+      width: 85%;
+      margin: 0 auto;
+    }
+  }
 }

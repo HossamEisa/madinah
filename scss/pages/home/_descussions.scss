@@ -6,8 +6,15 @@
 
     }
 
+
+
     .descussions-article {
         padding: calcRem(60) calcRem(20);
+
+        a {
+            all: unset;
+            cursor: pointer;
+        }
 
         .article-info {
             .article-title {

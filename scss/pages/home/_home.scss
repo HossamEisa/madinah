@@ -3,11 +3,24 @@ $homeHeight-xxl: 940px;
 
 #home {
      overflow-x: hidden;
-     height: $homeHeight;
+     height: 600px;
      position: relative;
+
+     @include mq('sm') {
+          height: 700px;
+     }
+
+     @include mq('md') {
+          height: 550px;
+     }
+
+     @include mq('lg') {
+          min-height: 740px;
+     }
 
      @include mq('xxl') {
           height: $homeHeight-xxl;
+          min-height: 100vh;
      }
 
      .mySwiperHome,
@@ -20,7 +33,11 @@ $homeHeight-xxl: 940px;
                background-position: top $left;
                height: 100%;
                background-size: cover;
-               padding-bottom: calcRem(363);
+               padding-bottom: calcRem(200);
+
+               @include mq('lg') {
+                    padding-bottom: calcRem(363);
+               }
 
                @at-root {
                     [dir="rtl"] & {
@@ -36,7 +53,7 @@ $homeHeight-xxl: 940px;
           .content-swiper {
                z-index: 22;
                color: $font-white;
-               padding-inline-start: 30px;
+               // padding-inline-start: 30px;
                padding-top: calcRem(140);
 
                @include mq('sm') {
@@ -49,7 +66,7 @@ $homeHeight-xxl: 940px;
                }
 
                @include mq('xxl') {
-                    padding-top: calcRem(220);
+                    padding-top: calcRem(250);
                     padding-inline-start: 0;
                     width: 53.9%;
                }
@@ -241,10 +258,12 @@ $homeHeight-xxl: 940px;
 
 @media (max-width: 1139px) {
      #home {
-          height: 720px;
 
           .mySwiperHome {
                .content-swiper {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
 
                     &.three {
                          width: 100%;
@@ -273,7 +292,6 @@ $homeHeight-xxl: 940px;
 
 @media (max-width: 991px) {
      #home {
-          height: 600px;
 
           .mySwiperHome {
                .content-swiper {
@@ -382,12 +400,12 @@ $homeHeight-xxl: 940px;
                .swiper-button {
 
                     &.next {
-                         bottom: 5%;
+                         bottom: 22%;
                          #{$right}: 10%;
                     }
 
                     &.prev {
-                         bottom: 5%;
+                         bottom: 22%;
                          #{$right}: 20%;
                     }
 
@@ -400,7 +418,6 @@ $homeHeight-xxl: 940px;
 }
 
 .rectangle-area {
-     background: url('../../assets/img/Rectangle.png') no-repeat center/100% 100%;
      position: absolute;
      #{$left}: 0;
      bottom: 0;
@@ -409,7 +426,9 @@ $homeHeight-xxl: 940px;
      padding-inline-end: calcRem(20);
      padding-bottom: calcRem(20);
      padding-top: calcRem(10);
-     width: 50%;
+     width: 100%;
+     background-color: rgba(0, 0, 0, 0.5);
+     padding-#{$left}: calcRem(20);
 
      // display: none;
      @include mq('sm') {
@@ -419,6 +438,7 @@ $homeHeight-xxl: 940px;
      @include mq('md') {
           width: 50%;
           display: block;
+          background: url('../../assets/img/Rectangle.png') no-repeat center/100% 100%;
      }
 
      @include mq('lg') {

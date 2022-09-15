@@ -21,6 +21,21 @@
         background-color: $font-primary;
         border-radius: 50%;
         padding: 10px;
+        position: fixed;
+        margin-bottom: 50px;
+        width: 50px;
+
+        @include mq('lg') {
+            #{$right}: 1%;
+            top: 75%;
+        }
+
+        @include mq('xl') {
+            #{$right}: 1.2%;
+        }
+        @include mq('xxl') {
+            width: 80px;
+        }
     }
 
 }

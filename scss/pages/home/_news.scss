@@ -7,7 +7,7 @@
 }
 
 .newsCarousel {
-    padding-bottom: calcRem(56);
+    padding-bottom: calcRem(46);
 
     .swiper-slide {
 
@@ -43,15 +43,10 @@
         }
     }
 
-    .swiper-pagination {
-        display: flex;
-        justify-content: flex-end;
-    }
-
     .swiper-horizontal>.swiper-pagination-bullets,
     .swiper-pagination-bullets.swiper-pagination-horizontal,
     .swiper-pagination-custom,
     .swiper-pagination-fraction {
-        bottom: calcRem(56);
+        bottom: calcRem(25);
     }
 }

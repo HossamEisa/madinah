@@ -9,6 +9,9 @@
         height: 100%;
         display: flex;
         align-items: center;
+        @include mq('xl') {
+            height: auto;
+        }
     }
 
     .swiper-slide {
@@ -19,6 +22,10 @@
     .subdomain {
         border: 1px solid #F3EFE5;
         padding: calcRem(15) calcRem(50);
+        a {
+            all: unset;
+            cursor: pointer;
+        }
 
         .title {
             color: $font-secondary;
