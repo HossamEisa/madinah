@@ -1,5 +1,7 @@
 .academic-calender {
+    height: 100%;
     .section {
+        height: 100%;
         padding: 21px;
     }
 
@@ -45,5 +47,8 @@
 
         }
 
+    }
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 0;
     }
 }

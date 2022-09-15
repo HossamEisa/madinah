@@ -1,10 +1,14 @@
 .subdomain-box {
+    height: 100%;
     @include mq('xl') {
         margin-top: calcRem(40);
     }
 
     .section {
         padding: calcRem(15) calcRem(50);
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
 
     .swiper-slide {

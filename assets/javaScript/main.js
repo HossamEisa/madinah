@@ -58,6 +58,34 @@ let subdomainSwiper = new Swiper(".subdomain-swiper", {
      },
 });
 
+let academicCalendarSwiper = new Swiper(".academic-calendar-swiper", {
+     spaceBetween: 10,
+     slidesPerView: 1,
+     speed: 1200,
+     pagination: {
+          el: ".academic-calendar-swiper .swiper-pagination",
+          clickable: true,
+     },
+});
+let swiperAnnoncmentsSwiper = new Swiper(".swiper-annoncments", {
+     spaceBetween: 10,
+     slidesPerView: 1,
+     speed: 1200,
+     pagination: {
+          el: ".swiper-annoncments .swiper-pagination",
+          clickable: true,
+     },
+});
+
+let journalsSwiper = new Swiper(".journals-swiper", {
+     spaceBetween: 10,
+     slidesPerView: 1,
+     speed: 1200,
+     pagination: {
+          el: ".journals-swiper .swiper-pagination",
+          clickable: true,
+     },
+});
 
 
 const searchBox = document.querySelector('.search-box');
