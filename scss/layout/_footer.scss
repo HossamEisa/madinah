@@ -5,6 +5,21 @@ footer {
     margin-bottom: 0;
   }
 
+  .social-media {
+    all: unset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .social-item {
+      width: 32px;
+      height: 32px;
+    }
+    .contact {
+      width: 40px;
+    }
+  }
+  
+
   .wrapper-one {
     background: rgb(10, 37, 100);
     background: linear-gradient(90deg, rgba(10, 37, 100, 1) 11%, rgba(60, 83, 140, 1) 87%);
@@ -19,6 +34,7 @@ footer {
       font-size: calcRem(16);
       text-align: center;
       margin-bottom: 0;
+      line-height: 2.1;
     }
 
     .logo {
@@ -42,6 +58,14 @@ footer {
     .location {
       width: 394px;
       height: 364px;
+
+      p {
+        margin: 0;
+      }
+
+      .card-title {
+        margin: 0;
+      }
 
       .card {
         border-radius: 0;
@@ -74,9 +98,9 @@ footer {
     padding-top: 41px;
     padding-bottom: 25px;
 
-    a {
-      font-size: calcRem(16);
-      font-weight: 500;
+    a:not(.social-item) {
+      font-size: calcRem(14);
+      font-weight: $font-b;
       display: inline-block;
       text-decoration: none;
       color: black;
@@ -181,7 +205,7 @@ footer {
         align-items: start !important;
       }
 
-      .col-md-3:nth-child(4) {
+      .col-md-3:nth-child(5) {
         width: 100%;
       }
 
@@ -248,7 +272,7 @@ footer {
 
 @media (max-width: 650px) {
 
- footer .wrapper-one {
+  footer .wrapper-one {
     padding-bottom: 70px;
 
     p,
@@ -271,10 +295,8 @@ footer {
 
     .app-container,
     .certificaten {
-      width: 85%;
-      margin-#{$left}: auto;
+      text-align: center;
     }
-
     .certificaten {
       margin-bottom: 50px;
       margin-top: 40px;

@@ -4,31 +4,16 @@
     }
 
     .swiper-slide {
-        padding-inline-start: calcRem(30);
+        padding-inline-start: calcRem(20);
         padding-inline-end: calcRem(20);
         padding-bottom: 2rem;
 
-        @include mq('lg') {
-            padding-inline-end: calcRem(60);
-        }
-
-        @include mq('xl') {
-            padding-inline-end: calcRem(30);
-        }
-
-        @include mq('xxl') {
-            padding-inline-end: 11%;
-        }
-
-        @media (min-width: 1750px) {
-            @include mq('xxl') {
-                padding-inline-end: calcRem(108);
-            }
-        }
     }
 
     a {
         display: block;
+        all: unset;
+        cursor: pointer;
     }
 
     .desc {

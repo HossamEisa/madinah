@@ -24,6 +24,7 @@
         position: fixed;
         margin-bottom: 50px;
         width: 50px;
+        z-index: 12;
 
         @include mq('lg') {
             #{$right}: 1%;
