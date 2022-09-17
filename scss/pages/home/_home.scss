@@ -91,10 +91,10 @@ $homeHeight-xxl: 940px;
                     line-height: 35px;
                }
 
-               .form-select {
-                    padding-#{$left}: 50px;
-                    font-size: 16px;
-                    line-height: 42px;
+               .select-box {
+                    display: block;
+                    width: 100%;
+                    position: relative;
 
                     &:first-child {
                          margin-inline-end: 30px;
@@ -103,6 +103,38 @@ $homeHeight-xxl: 940px;
                               margin-inline-end: 15px;
                          }
                     }
+
+                    &::after {
+                         content: '';
+                         position: absolute;
+                         #{$left}: 0;
+                         top: 50%;
+                         background-image: url('../../assets/img/aca.png');
+                         width: 20px;
+                         height: 20px;
+                         background-repeat: no-repeat;
+                         transform: translate(10px, -50%);
+
+                         @at-root {
+                              [dir="rtl"] & {
+                                   transform: translate(-10px, -50%);
+                              }
+                         }
+                    }
+
+                    &:nth-child(2) {
+                         &::after {
+                              background-image: url("../../assets/img/application-line.png");
+                         }
+                    }
+               }
+
+               .form-select {
+                    padding-#{$left}: 50px;
+                    font-size: 16px;
+                    line-height: 42px;
+                    position: relative;
+                    background-position: $right 0.75rem center;
                }
 
                .btn-submit {
