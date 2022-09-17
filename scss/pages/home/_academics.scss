@@ -21,9 +21,9 @@
     }
 
     a {
-        display: block;
         all: unset;
         cursor: pointer;
+        display: block;
 
         &:hover {
             color: $font-text;
@@ -37,9 +37,15 @@
                 height: 6px;
                 border-radius: 20px;
                 background-color: $font-primary;
-                left: 50%;
+                #{$left}: 50%;
                 bottom: -10px;
                 transform: translateX(-50%);
+
+                @at-root {
+                    [dir="rtl"] & {
+                        transform: translateX(50%);
+                    }
+                }
             }
         }
     }
