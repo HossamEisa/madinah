@@ -15,6 +15,10 @@
             max-height: calcRem(314);
             width: 100%;
             object-fit: cover;
+
+            @include mq('xxl') {
+                max-height: calcRem(300);
+            }
         }
 
         .date {
@@ -47,6 +51,6 @@
     .swiper-pagination-bullets.swiper-pagination-horizontal,
     .swiper-pagination-custom,
     .swiper-pagination-fraction {
-        bottom: calcRem(25);
+        bottom: 6px;
     }
 }

@@ -1,11 +1,21 @@
 .mediu-portals {
     .section {
-        padding: calcRem(27) calcRem(27) calcRem(15);
+        padding: calcRem(27) calcRem(27) calcRem(0);
+        display: flex;
+        flex-direction: column;
+
+        .swiper-box {
+            flex: 1 0 0%;
+
+            .swiper {
+                height: 100%;
+            }
+        }
     }
 
     .swiper-slide {
+        padding-bottom: calcRem(60);
         .row {
-            padding-bottom: calcRem(60);
 
             >div {
                 &:nth-child(odd) {
@@ -52,14 +62,23 @@
                 }
             }
         }
+
         img {
             width: 50px;
+
             @include mq('md') {
                 width: 60px;
             }
+
             @include mq('xxl') {
                 width: 90px;
             }
         }
+    }
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: 10px;
     }
 }

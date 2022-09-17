@@ -54,7 +54,7 @@
     }
 
     .swiper-annoncments {
-        padding-bottom: 30px;
+        padding-bottom: calcRem(40);
 
     }
 
@@ -62,6 +62,6 @@
     .swiper-pagination-bullets.swiper-pagination-horizontal,
     .swiper-pagination-custom,
     .swiper-pagination-fraction {
-        bottom: 5px;
+        bottom: 8px;
     }
 }

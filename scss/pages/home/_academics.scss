@@ -1,12 +1,21 @@
 .academics {
     .section {
-        padding: calcRem(27) calcRem(15);
+        padding: calcRem(27) calcRem(15) 0;
+        display: flex;
+        flex-direction: column;
+
+        .swiper-box {
+            flex: 1 0 0%;
+            .swiper {
+                height: 100%;
+            }
+        }
     }
 
     .swiper-slide {
         padding-inline-start: calcRem(20);
         padding-inline-end: calcRem(20);
-        padding-bottom: 2rem;
+        padding-bottom: 3rem;
 
     }
 
@@ -20,5 +29,82 @@
         font-size: calcRem(20);
         color: $font-text;
         margin: 0;
+    }
+
+    &.box {
+        .swiper-slide {
+            .row {
+                >div {
+                    &:nth-child(odd) {
+                        border-#{$right}: 1px solid rgba(220, 220, 220, 0.25);
+                    }
+
+                    &:nth-child(1),
+                    &:nth-child(2) {
+                        padding-bottom: 20px;
+                        border-bottom: 1px solid rgba(220, 220, 220, 0.25);
+                    }
+
+                    &:nth-child(3),
+                    &:nth-child(4) {
+                        padding-top: 20px;
+                    }
+                }
+            }
+
+            a {
+                color: $font-text;
+                text-align: center;
+                display: block;
+
+                p {
+                    margin: 0;
+                }
+
+                &:hover {
+                    color: $font-text;
+                    position: relative;
+                    text-decoration: none;
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        width: calcRem(94);
+                        height: 6px;
+                        border-radius: 20px;
+                        background-color: $font-primary;
+                        left: 50%;
+                        bottom: -10px;
+                        transform: translateX(-50%);
+                    }
+                }
+
+                .desc {
+                    line-height: 1.2;
+                    font-family: $font-m;
+                    margin-top: 10px;
+                }
+            }
+
+            img {
+                width: 50px;
+
+                @include mq('md') {
+                    width: 60px;
+                }
+
+                @include mq('xxl') {
+                    width: 90px;
+                }
+            }
+        }
+    }
+
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: 10px;
     }
 }

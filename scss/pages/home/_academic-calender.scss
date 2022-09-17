@@ -3,7 +3,7 @@
 
     .section {
         height: 100%;
-        padding: 21px 21px 0;
+        padding: 18px 21px 0;
     }
 
     .title {
@@ -16,8 +16,8 @@
         font-size: calcRem(18);
         line-height: 24px;
         font-family: $font-m;
-        margin-bottom: 10px;
-        margin-top: 6px;
+        margin-bottom: 5px;
+        margin-top: 5px;
     }
 
     .link {
@@ -51,6 +51,9 @@
     }
     .swiper-slide {
         padding-bottom: 25px;
+        img {
+                width: calcRem(40);
+        }
     }
     .swiper-horizontal>.swiper-pagination-bullets,
     .swiper-pagination-bullets.swiper-pagination-horizontal,

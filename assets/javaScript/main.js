@@ -39,12 +39,12 @@ let mediuPortalsSwiper = new Swiper(".mediu-portals-swiper", {
           clickable: true,
      },
 });
-let academicsSwiper = new Swiper(".academics-swiper", {
+let academicsSwiper = new Swiper(".academics .academics-swiper", {
      spaceBetween: 10,
      slidesPerView: 1,
      speed: 1200,
      pagination: {
-          el: ".academics-swiper .swiper-pagination",
+          el: ".academics .swiper-pagination",
           clickable: true,
      },
 });
