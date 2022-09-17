@@ -1,4 +1,6 @@
 footer {
+  margin-top: calcRem(30);
+
   .heading-footer {
     font-family: $font-m;
     font-size: calcRem(16);
@@ -10,15 +12,17 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
     .social-item {
       width: 32px;
       height: 32px;
     }
+
     .contact {
       width: 40px;
     }
   }
-  
+
 
   .wrapper-one {
     background: rgb(10, 37, 100);
@@ -297,9 +301,10 @@ footer {
     .certificaten {
       text-align: center;
     }
+
     .certificaten {
-      margin-bottom: 50px;
-      margin-top: 40px;
+      margin-bottom: 20px;
+      margin-top: 15px;
     }
 
     .app-container {
