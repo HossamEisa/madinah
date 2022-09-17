@@ -23,7 +23,7 @@
             display: flex;
             align-items: center;
             font-size: calcRem(24);
-            font-family: $font-m;
+            font-family: var(--font-m);
         }
 
         .link {
@@ -54,7 +54,7 @@
             &::before {
                 @include counter;
                 font-size: calcRem(16);
-                font-family: $font-m;
+                font-family: var(--font-m);
                 line-height: 2;
             }
         }

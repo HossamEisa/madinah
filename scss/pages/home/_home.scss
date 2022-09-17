@@ -205,6 +205,10 @@ $homeHeight-xxl: 940px;
                               font-size: 24px;
                               font-weight: 600;
                               margin: 0;
+
+                              @include mq('xxl') {
+                                   width: 80%;
+                              }
                          }
                     }
                }
@@ -447,7 +451,8 @@ $homeHeight-xxl: 940px;
           @at-root {
                [dir="rtl"] & {
                     transform: scaleX(-1);
-                    > div  {
+
+                    >div {
                          transform: scaleX(-1);
                     }
                }
@@ -476,7 +481,7 @@ $homeHeight-xxl: 940px;
      .apply {
           color: $font-primary;
           font-size: calcRem(20);
-          font-family: $font-m;
+          font-family: var(--font-m);
           text-transform: capitalize;
 
           @include mq('sm') {
@@ -505,7 +510,7 @@ $homeHeight-xxl: 940px;
      .more {
           color: $font-secondary;
           font-size: calcRem(14);
-          font-family: $font-sb;
+          font-family: var(--font-b);
           text-transform: capitalize;
 
           @include mq('sm') {

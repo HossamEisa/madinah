@@ -57,7 +57,6 @@
      height: 1px;
      background-color: $font-black-light;
      transform: rotate(-40deg)
-     
 }
 
 @mixin spanCounterAndLine {
@@ -71,7 +70,7 @@
 
 @mixin waterMark {
      position: relative;
-     font-family: 'Poppins', sans-serif;
+     font-family: var(--font-r);
      font-weight: 500;
      font-size: 70px;
      text-align: center;
@@ -138,7 +137,7 @@ $breakpoints: ('xs': 0,
      'lg': 992px,
      'xl': 1200px,
      'xxl': 1535px,
-     );
+);
 
 //use max if use desktop first  --- mobile first change it to min
 @mixin mq($width, $type: min) {
@@ -173,4 +172,22 @@ $breakpoints: ('xs': 0,
      display: -webkit-box;
      -webkit-line-clamp: $num;
      -webkit-box-orient: vertical;
+}
+
+
+// Animation Mixins
+
+
+@mixin pulse-ani($name, $color) {
+     animation: $name 2s infinite;
+
+     @keyframes #{$name} {
+          0% {
+               box-shadow: 0 0 0 0px $color;
+          }
+
+          100% {
+               box-shadow: 0 0 0 15px $color;
+          }
+     }
 }

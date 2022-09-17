@@ -3,15 +3,31 @@
     background: url("../../assets/img/bg.jpeg");
     background-repeat: no-repeat;
     background-size: contain;
+
     @include mq('xxl') {
         font-size: 20px;
+    }
+
+    --font-r: "Poppins-Regular";
+    --font-l: "Poppins-Light";
+    --font-m: "Poppins-Medium";
+    --font-sb: "Poppins-SemiBold";
+    --font-b: "Poppins-Bold";
+
+
+    &:lang(ar) {
+        --font-r: "Droid-Arabic-Kufi";
+        --font-l: "Droid-Arabic-Kufi";
+        --font-m: "DroidKufi-Bold";
+        --font-sb: "DroidKufi-Bold";
+        --font-b: "DroidKufi-Bold";
     }
 }
 
 
 
 body {
-    font-family: $font-r, $ar-font;
+    font-family: var(--font-r);
     color: $font-text;
     direction: $direction;
     text-align: $left;
@@ -27,7 +43,8 @@ body {
     }
 }
 
-.fa-arrow-left-long, .fa-right-to-bracket {
+.fa-arrow-left-long,
+.fa-right-to-bracket {
     @at-root {
         [dir="rtl"] & {
             transform: rotate(180deg);

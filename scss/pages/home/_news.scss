@@ -23,7 +23,7 @@
 
         .date {
             color: $dark-blue;
-            font-family: $font-sb;
+            font-family: var(--font-b);
             font-size: calcRem(14);
             margin-bottom: 15px;
             padding: 0 15px;
@@ -32,7 +32,7 @@
 
         .desc {
             font-size: calcRem(18);
-            font-family: $font-b;
+            font-family: var(--font-b);
             line-height: 24px;
             padding: 0 15px;
 
@@ -41,7 +41,7 @@
         .more-details {
             font-size: calcRem(16);
             color: $dark-blue;
-            font-family: $font-b;
+            font-family: var(--font-b);
             padding: 0 15px;
 
         }

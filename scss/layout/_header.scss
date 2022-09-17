@@ -65,9 +65,10 @@
           a {
                color: #000;
                transition: 0.3s ease-in-out, font 0.3s ease-in-out;
+
                &:hover {
                     color: $dark-blue;
-                    font-family: $font-m;
+                    font-family: var(--font-m);
                }
           }
 
@@ -154,7 +155,7 @@
           line-height: 40px;
           font-weight: 500;
           flex-shrink: 0;
-          font-family: $font-m;
+          font-family: var(--font-m);
 
           @include mq('xl') {
                position: relative;
@@ -213,7 +214,7 @@
                     height: 1px;
 
                     @include mq('xxl') {
-                         top: -20px;
+                         top: - calcRem(23);
                     }
                }
           }
@@ -421,12 +422,15 @@
 
           .social-media {
                position: static;
+
                .social-item {
                     width: 32px;
                     height: 32px;
+
                     i {
                          font-size: 14px;
                     }
+
                     svg {
                          width: 15px;
                     }

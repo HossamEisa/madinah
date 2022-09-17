@@ -2,7 +2,7 @@
     .title {
         font-size: calcRem(24);
         color: #383130;
-        font-family: $font-m;
+        font-family: var(--font-m);
     }
 
     .section {
@@ -19,6 +19,7 @@
     .swiper-pagination-fraction {
         bottom: 5px;
         width: 55%;
+        #{$left}: 0;
     }
 
     .journal-box {
@@ -32,7 +33,7 @@
         p {
             margin: 0;
             font-size: calcRem(28);
-            font-family: $font-m;
+            font-family: var(--font-m);
         }
 
         a {

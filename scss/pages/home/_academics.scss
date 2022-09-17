@@ -6,6 +6,7 @@
 
         .swiper-box {
             flex: 1 0 0%;
+
             .swiper {
                 height: 100%;
             }
@@ -23,6 +24,24 @@
         display: block;
         all: unset;
         cursor: pointer;
+
+        &:hover {
+            color: $font-text;
+            position: relative;
+            text-decoration: none;
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: calcRem(94);
+                height: 6px;
+                border-radius: 20px;
+                background-color: $font-primary;
+                left: 50%;
+                bottom: -10px;
+                transform: translateX(-50%);
+            }
+        }
     }
 
     .desc {
@@ -74,14 +93,14 @@
                         border-radius: 20px;
                         background-color: $font-primary;
                         left: 50%;
-                        bottom: -10px;
+                        bottom: -15px;
                         transform: translateX(-50%);
                     }
                 }
 
                 .desc {
                     line-height: 1.2;
-                    font-family: $font-m;
+                    font-family: var(--font-m);
                     margin-top: 10px;
                 }
             }

@@ -16,7 +16,7 @@
 
     .title {
         font-size: calcRem(42);
-        font-family: $font-m;
+        font-family: var(--font-m);
         margin: 0;
         line-height: calcRem(40);
     }
@@ -24,7 +24,7 @@
     .subtitle {
         color: #AAAAAA;
         font-size: calcRem(18);
-        font-family: $font-m;
+        font-family: var(--font-m);
         line-height: calcRem(36);
     }
 
@@ -38,7 +38,7 @@
 .title-with-bottom-border {
     color: #001351;
     font-size: calcRem(24);
-    font-family: $font-m;
+    font-family: var(--font-m);
     text-align: center;
     position: relative;
     margin-bottom: 3.5rem;

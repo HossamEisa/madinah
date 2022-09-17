@@ -9,7 +9,7 @@
         .accordion-button {
             border-radius: 5px;
             font-size: calcRem(24);
-            font-family: $font-m;
+            font-family: var(--font-m);
 
             &:focus {
                 box-shadow: none;
@@ -47,7 +47,7 @@
             @include counter;
             font-size: calcRem(14);
             line-height: 2;
-            font-family: $font-m;
+            font-family: var(--font-m);
 
         }
     }
