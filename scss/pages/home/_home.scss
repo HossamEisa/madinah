@@ -181,7 +181,7 @@ $homeHeight-xxl: 940px;
                     padding: 15px 30px;
 
                     i {
-                         padding-#{$left}: 15px;
+                         padding-left: 15px;
                          color: $font-primary;
                     }
                }
@@ -443,6 +443,15 @@ $homeHeight-xxl: 940px;
           width: 50%;
           display: block;
           background: url('../../assets/img/Rectangle.png') no-repeat center/100% 100%;
+
+          @at-root {
+               [dir="rtl"] & {
+                    transform: scaleX(-1);
+                    > div  {
+                         transform: scaleX(-1);
+                    }
+               }
+          }
      }
 
      @include mq('lg') {

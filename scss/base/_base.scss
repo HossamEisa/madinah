@@ -27,7 +27,7 @@ body {
     }
 }
 
-.fa-arrow-left-long {
+.fa-arrow-left-long, .fa-right-to-bracket {
     @at-root {
         [dir="rtl"] & {
             transform: rotate(180deg);
