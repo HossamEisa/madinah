@@ -30,6 +30,7 @@
         @include ScrollBar;
         overflow-x: auto;
         overflow-y: hidden;
+
         @include mq('lg') {
             overflow: visible;
         }
