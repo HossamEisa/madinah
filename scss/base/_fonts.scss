@@ -6,34 +6,24 @@
 // -----------------------------------------------------------------------------
 
 @font-face {
-    font-family: "Poppins-Regular";
-    src: url("../fonts/Poppins-Regular.ttf");
+    font-family: toggleFont("Poppins-Regular", "Cairo-Regular");
+    src: toggleFont(url("../fonts/Poppins-Regular.ttf"), url("../fonts/Cairo-Regular.ttf"));
+}
+@font-face {
+    font-family: toggleFont("Poppins-Light", "Cairo-Light");
+    src: toggleFont(url("../fonts/Poppins-Light.ttf"), url("../fonts/Cairo-Light.ttf"));
 }
 
 @font-face {
-    font-family: "Poppins-Light";
-    src: url("../fonts/Poppins-Light.ttf");
+    font-family: toggleFont("Poppins-Medium", "Cairo-Medium");
+    src: toggleFont(url("../fonts/Poppins-Medium.ttf"), url("../fonts/Cairo-Medium.ttf"));
 }
 
 @font-face {
-    font-family: "Poppins-Medium";
-    src: url("../fonts/Poppins-Medium.ttf");
-}
-
-@font-face {
-    font-family: "Poppins-SemiBold";
-    src: url("../fonts/Poppins-SemiBold.ttf");
-}
-
-@font-face {
-    font-family: "Poppins-Bold";
-    src: url("../fonts/Poppins-Bold.ttf");
+    font-family: toggleFont("Poppins-SemiBold", "Cairo-SemiBold");
+    src: toggleFont(url("../fonts/Poppins-SemiBold.ttf"), url("../fonts/Cairo-SemiBold.ttf"));
 }
 @font-face {
-    font-family: "Droid-Arabic-Kufi";
-    src: url("../fonts/ArbFONTS-Droid-Arabic-Kufi.ttf");
-}
-@font-face {
-    font-family: "DroidKufi-Bold";
-    src: url("../fonts/DroidKufi-Bold.ttf");
+    font-family: toggleFont("Poppins-Bold", "Cairo-Bold");
+    src: toggleFont(url("../fonts/Poppins-Bold.ttf"), url("../fonts/Cairo-Bold.ttf"));
 }

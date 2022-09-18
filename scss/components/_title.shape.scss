@@ -1,5 +1,5 @@
 .shape-title {
-    font-family: var(--font-m);
+    font-family: $font-m;
     color: #001351;
     font-size: calcRem(24);
     background-color: #fff;
@@ -56,7 +56,7 @@
 .view-all-title {
     color: $font-primary;
     font-size: calcRem(16);
-    font-family: var(--font-b);
+    font-family: $font-b;
 
     &:hover {
         color: $font-primary;

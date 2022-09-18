@@ -2,7 +2,7 @@ footer {
   margin-top: calcRem(30);
 
   .heading-footer {
-    font-family: var(--font-m);
+    font-family: $font-m;
     font-size: calcRem(16);
     margin-bottom: 0;
   }
@@ -34,7 +34,7 @@ footer {
 
     .content-certificaten,
     .content-certificaten-data {
-      font-family: var(--font-m);
+      font-family: $font-m;
       font-size: calcRem(16);
       text-align: center;
       margin-bottom: 0;
@@ -115,13 +115,18 @@ footer {
       display: inline-block;
       text-decoration: none;
       color: black;
-      font-family: var(--font-m);
+      font-family: $font-m;
       padding-inline-end: calcRem(15);
       overflow: hidden;
       transition: 1s ease-in-out;
       position: relative;
       padding: 0;
       padding-bottom: 5px;
+      @at-root {
+        [dir="rtl"] & {
+          font-family: $font-sb;
+        }
+      }
 
       &::after {
         background: #000;
@@ -174,7 +179,7 @@ footer {
 
     .copyright {
       font-size: calcRem(14);
-      font-family: var(--font-m);
+      font-family: $font-m;
       color: rgba(0, 0, 0, 0.70);
     }
   }

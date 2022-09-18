@@ -17,12 +17,12 @@
     .title {
         font-size: calcRem(22);
         color: #383130;
-        font-family: var(--font-m);
+        font-family: $font-m;
     }
 
     .desc {
         font-size: calcRem(16);
-        font-family: var(--font-b);
+        font-family: $font-b;
         line-height: calcRem(20);
         margin-bottom: 12px;
     }
@@ -48,7 +48,7 @@
             #{$left}: 0;
             padding: 8px 35px;
             color: $dark-blue;
-            font-family: var(--font-m);
+            font-family: $font-m;
             font-size: calcRem(18);
         }
     }

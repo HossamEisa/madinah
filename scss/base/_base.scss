@@ -8,26 +8,26 @@
         font-size: 20px;
     }
 
-    --font-r: "Poppins-Regular";
-    --font-l: "Poppins-Light";
-    --font-m: "Poppins-Medium";
-    --font-sb: "Poppins-SemiBold";
-    --font-b: "Poppins-Bold";
+    // --font-r: "Poppins-Regular";
+    // --font-l: "Poppins-Light";
+    // --font-m: "Poppins-Medium";
+    // --font-sb: "Poppins-SemiBold";
+    // --font-b: "Poppins-Bold";
 
 
-    &:lang(ar) {
-        --font-r: "Droid-Arabic-Kufi";
-        --font-l: "Droid-Arabic-Kufi";
-        --font-m: "DroidKufi-Bold";
-        --font-sb: "DroidKufi-Bold";
-        --font-b: "DroidKufi-Bold";
-    }
+    // &:lang(ar) {
+    //     --font-r: "Cairo-Regular";
+    //     --font-l: "Cairo-Light";
+    //     --font-m: "Cairo-Medium";
+    //     --font-sb: "Cairo-SemiBold";
+    //     --font-b: "Cairo-Bold";
+    // }
 }
 
 
 
 body {
-    font-family: var(--font-r), "Droid-Arabic-Kufi";
+    font-family: $font-r, var(--bs-body-font-family);
     color: $font-text;
     direction: $direction;
     text-align: $left;

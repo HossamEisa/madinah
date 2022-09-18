@@ -19,14 +19,14 @@
         .article-info {
             .article-title {
                 font-size: calcRem(36);
-                font-family: var(--font-m);
+                font-family: $font-m;
                 line-height: 0;
             }
 
             .article-date {
                 color: $font-black-50;
                 font-size: calcRem(18);
-                font-family: var(--font-m);
+                font-family: $font-m;
 
                 .day {
                     font-size: calcRem(20);
@@ -39,12 +39,12 @@
         .title {
             color: $font-secondary;
             font-size: calcRem(24);
-            font-family: var(--font-m);
+            font-family: $font-m;
         }
 
         .desc {
             font-size: calcRem(18);
-            font-family: var(--font-m);
+            font-family: $font-m;
             line-height: 36px;
             height: calcRem(184);
             overflow: hidden;
@@ -57,13 +57,13 @@
 
             .date-title {
                 font-size: calcRem(14);
-                font-family: var(--font-m);
+                font-family: $font-m;
                 line-height: 0;
             }
 
             .date-time {
                 font-size: calcRem(18);
-                font-family: var(--font-m);
+                font-family: $font-m;
             }
         }
 

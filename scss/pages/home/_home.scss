@@ -513,7 +513,7 @@ $homeHeight-xxl: 940px;
      .apply {
           color: $font-primary;
           font-size: calcRem(20);
-          font-family: var(--font-m);
+          font-family: $font-m;
           text-transform: capitalize;
 
           @include mq('sm') {
@@ -542,7 +542,7 @@ $homeHeight-xxl: 940px;
      .more {
           color: $font-secondary;
           font-size: calcRem(14);
-          font-family: var(--font-b);
+          font-family: $font-b;
           text-transform: capitalize;
 
           @include mq('sm') {

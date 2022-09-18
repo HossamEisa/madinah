@@ -56,7 +56,13 @@
      width: 52.5px;
      height: 1px;
      background-color: $font-black-light;
-     transform: rotate(-40deg)
+     transform: rotate(-50deg);
+
+     @at-root {
+          [dir="rtl"] & {
+               transform: rotate(50deg);
+          }
+     }
 }
 
 @mixin spanCounterAndLine {
@@ -70,7 +76,7 @@
 
 @mixin waterMark {
      position: relative;
-     font-family: var(--font-r);
+     font-family: $font-r;
      font-weight: 500;
      font-size: 70px;
      text-align: center;

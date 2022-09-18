@@ -9,13 +9,13 @@
     .title {
         font-size: calcRem(22);
         color: #383130;
-        font-family: var(--font-m);
+        font-family: $font-m;
     }
 
     .desc {
         font-size: calcRem(18);
         line-height: 24px;
-        font-family: var(--font-m);
+        font-family: $font-m;
         margin-bottom: 5px;
         margin-top: 5px;
     }
@@ -23,7 +23,7 @@
     .link {
         color: #001351;
         font-size: calcRem(16);
-        font-family: var(--font-b);
+        font-family: $font-b;
     }
 
 
@@ -31,7 +31,7 @@
     .date-time {
         color: $font-black-50;
         font-size: calcRem(18);
-        font-family: var(--font-m);
+        font-family: $font-m;
         margin: 0;
 
         .day {
@@ -40,7 +40,7 @@
 
             .date-title {
                 font-size: calcRem(36);
-                font-family: var(--font-m);
+                font-family: $font-m;
                 line-height: 0;
                 color: $font-text;
             }
