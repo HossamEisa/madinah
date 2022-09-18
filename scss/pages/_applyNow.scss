@@ -6,12 +6,17 @@
         background-color: $font-primary
     }
 
+    .tab-content {
+        height: 100%;
+    }
+
     .tab-content>.tab-pane {
         display: block;
         opacity: 0;
         visibility: hidden;
         height: 0;
         overflow: hidden;
+
         &.active,
         &.show {
             opacity: 1;
@@ -24,7 +29,7 @@
     .scrollbar {
         @include ScrollBar;
         overflow-x: auto;
-
+        overflow-y: hidden;
         @include mq('lg') {
             overflow: visible;
         }
@@ -36,7 +41,7 @@
     }
 
     .nav-link {
-        --bs-nav-link-padding-y: 10px;
+        --bs-nav-link-padding-y: 5px;
         --bs-nav-link-padding-x: 15px;
         position: relative;
         display: flex;
@@ -71,6 +76,7 @@
             font-family: $font-sb;
             color: #000;
             margin: 0;
+            line-height: 1.4;
 
             @include mq('lg') {
                 font-size: calcRem(18);
@@ -95,7 +101,7 @@
 
         img {
             object-fit: cover;
-
+            max-height: 100%;
         }
 
         .overlay-box {
