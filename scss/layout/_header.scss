@@ -6,6 +6,9 @@
      z-index: 9;
 
 
+     .navbar-brand {
+          margin-#{$right}: var(--bs-navbar-brand-margin-end);
+     }
 
      .header_mid {
           position: absolute;
@@ -149,7 +152,7 @@
      }
 
      .headerbtn {
-          padding: 0px 10px;
+          padding: 0px 8px;
           background-color: #fd0;
           color: #000;
           border-radius: 50px;
@@ -158,10 +161,24 @@
           font-weight: 500;
           flex-shrink: 0;
           font-family: $font-m;
+          width: calcRem(44);
+          height: calcRem(44);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:hover {
+               background-color: $font-secondary;
+               color: $font-white;
+               border-color: $font-secondary;
+          }
 
           @include mq('xl') {
                position: relative;
                #{$right}: 10%;
+               width: auto;
+               display: block;
+               height: auto;
           }
      }
 
@@ -204,6 +221,24 @@
 
           }
 
+          .header_mid {
+               a {
+                    text-decoration: none;
+
+                    @include mq('lg') {
+                         font-size: 13px;
+                    }
+
+                    @include mq('xl') {
+                         font-size: calcRem(15);
+                    }
+
+                    @media screen and (min-width: 1750px) {
+                         font-size: calcRem(16);
+                    }
+               }
+          }
+
           .breadcrumb {
                position: relative;
 
@@ -221,10 +256,15 @@
                }
           }
 
+          .headerbtn {
+               #{$right}: 0;
+          }
+
           .search {
-               @include mq('xl') {
-                    #{$right}: 40px;
-               }
+               position: static;
+               // @include mq('xl') {
+               //      #{$right}: 40px;
+               // }
           }
      }
 
@@ -280,7 +320,7 @@
      }
 
      @media screen and (min-width: 1700px) {
-          padding: 12px 20px;
+          padding: 12px 16px;
      }
 }
 
