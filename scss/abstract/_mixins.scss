@@ -86,17 +86,23 @@
 }
 
 @mixin wateMarkBefore {
-     content: "our services";
+     content: attr(data-title);
      position: absolute;
-     font-weight: 700;
-     font-size: 160px;
-     text-transform: uppercase;
+     font-family: $font-b;
+     font-size: calcRem(80);
+     text-transform: capitalize;
      #{$left}: 0;
-     top: 50%;
+     top: 60%;
      transform: translateY(-50%);
      text-align: center;
      width: 100%;
-     color: rgba($color: $font-black-light, $alpha: 0.1)
+     overflow: hidden;
+     color: rgba(0, 0, 0, 0.04);
+
+     @include mq('lg') {
+          font-size: calcRem(160);
+          top: 60%;
+     }
 }
 
 @mixin ScrollBar {

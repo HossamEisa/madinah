@@ -36,6 +36,13 @@
             line-height: 24px;
             padding: 0 15px;
 
+            @at-root {
+                [dir="rtl"] & {
+                    @include mq('xxl') {
+                        line-height: 38px;
+                    }
+                }
+            }
         }
 
         .more-details {

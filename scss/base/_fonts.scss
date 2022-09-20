@@ -9,6 +9,7 @@
     font-family: toggleFont("Poppins-Regular", "Cairo-Regular");
     src: toggleFont(url("../fonts/Poppins-Regular.ttf"), url("../fonts/Cairo-Regular.ttf"));
 }
+
 @font-face {
     font-family: toggleFont("Poppins-Light", "Cairo-Light");
     src: toggleFont(url("../fonts/Poppins-Light.ttf"), url("../fonts/Cairo-Light.ttf"));
@@ -23,7 +24,18 @@
     font-family: toggleFont("Poppins-SemiBold", "Cairo-SemiBold");
     src: toggleFont(url("../fonts/Poppins-SemiBold.ttf"), url("../fonts/Cairo-SemiBold.ttf"));
 }
+
 @font-face {
     font-family: toggleFont("Poppins-Bold", "Cairo-Bold");
     src: toggleFont(url("../fonts/Poppins-Bold.ttf"), url("../fonts/Cairo-Bold.ttf"));
 }
+
+.font-m {
+    font-family: $font-m;
+}
+.font-sb { 
+    font-family: $font-b;
+} 
+.font-b { 
+    font-family: $font-b;
+} 

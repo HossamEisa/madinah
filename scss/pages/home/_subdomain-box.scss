@@ -24,7 +24,11 @@
     .subdomain {
         border: 1px solid #F3EFE5;
         padding: calcRem(20) calcRem(50);
-
+        @at-root {
+            [dir="rtl"] &{
+                padding: calcRem(35) calcRem(50);
+            }
+        }
         img {
             width: calcRem(70);
         }

@@ -1,6 +1,21 @@
 .annoncments {
     @include mq('xl') {
         margin-top: calcRem(40);
+        line-height: 38px;
+
+        @at-root {
+            [dir="rtl"] & {
+                margin-top: calcRem(60);
+            }
+        }
+    }
+
+    @include mq('xxl') {
+        @at-root {
+            [dir="rtl"] & {
+                margin-top: calcRem(40);
+            }
+        }
     }
 
     a {

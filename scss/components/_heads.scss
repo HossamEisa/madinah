@@ -18,7 +18,7 @@
         font-size: calcRem(42);
         font-family: $font-m;
         margin: 0;
-        line-height: calcRem(40);
+        line-height: calcRem(50);
     }
 
     .subtitle {
@@ -42,6 +42,7 @@
     text-align: center;
     position: relative;
     margin-bottom: 3.5rem;
+
     &::after {
         position: absolute;
         content: "";
@@ -52,5 +53,21 @@
         left: 50%;
         bottom: -10px;
         transform: translateX(-50%);
+    }
+}
+
+.full-title-water {
+    position: relative;
+    text-align: center;
+    margin: calcRem(70) 0;
+    font-size: calcRem(70);
+    font-family: $font-m;
+    color: $font-black-50;
+    @include mq('lg') {
+    margin: calcRem(100) 0;
+    font-size: calcRem(100);
+    }
+    &::after {
+        @include wateMarkBefore;
     }
 }
